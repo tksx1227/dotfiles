@@ -1,4 +1,8 @@
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Explorer
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 merged = 0
@@ -6,13 +10,22 @@ merged = 0
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 
+# Utils
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
-# [[plugins]]
-# repo = 'neoclide/coc.nvim'
-# merged = 0
-# rev = 'release'
-# hook_add = '''
-# source ~/.config/nvim/plugins/coc.vim
-# '''
+### Markdown Preview
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'previm/previm'
+hook_add = '''
+    autocmd BufRead,BufNewFile *.md  set filetype=markdown
+    nnoremap <silent> <C-p> :PrevimOpen<CR>
+    let g:vim_markdown_folding_disabled=1
+    let g:previm_enable_realtime=1
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
