@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# merged = 0
+# rev = 'release'
+# hook_add = '''
+# source ~/.config/nvim/plugins/coc.vim
+# '''

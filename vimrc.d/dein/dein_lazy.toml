@@ -1,0 +1,5 @@
+[[plugins]]
+repo = 'preservim/nerdtree'
+
+[[plugins]]
+repo = 'skanehira/translate.vim'
