@@ -2,8 +2,7 @@
 [[plugins]]
 repo = 'preservim/nerdtree'
 
-### Utils
-# Translater
+# Utils
+### Translater
 [[plugins]]
 repo = 'skanehira/translate.vim'
-
