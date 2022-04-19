@@ -1,8 +1,0 @@
-# Explorer
-[[plugins]]
-repo = 'preservim/nerdtree'
-
-# Utils
-### Translater
-[[plugins]]
-repo = 'skanehira/translate.vim'
