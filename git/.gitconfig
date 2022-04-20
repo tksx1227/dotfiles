@@ -1,0 +1,25 @@
+[user]
+	name = Takuma Tomori
+	email = tmrtkm1227tksx@gmail.com
+[core]
+	editor = nvim
+[color]
+	ui = auto
+[alias]
+	st = status
+	br = branch
+	ba = branch -a
+	co = checkout
+	ci = commit
+	d = diff
+	ds = diff --staged
+	rv = remote -v
+	log1 = log -n 1
+	log2 = log -n 2
+	log3 = log -n 3
+	log4 = log -n 4
+	log5 = log -n 5
+[init]
+	defaultBranch = main
+[commit]
+	template = ~/.config/git/.commit_template

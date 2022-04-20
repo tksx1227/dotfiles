@@ -1,0 +1,22 @@
+
+
+# ==================== Emojis ====================
+# 🎉  :tada: 初めてのコミット（Initial Commit）
+# ✨  :sparkles: 新機能（New Feature）
+# ⚡️  :zap: パフォーマンス改善（Improve performance）
+# 🐛  :bug: バグ修正（Bagfix）
+# ♻️   :recycle: リファクタリング（Refactoring）
+# 🔥  :fire: 機能削除（Remove code or files）
+# 📝  :memo: ドキュメント（Documentation）
+# 🔖  :bookmark: バージョンタグ（Version Tag）
+# 🎨  :art: デザインUI/UX（Accessibility）
+# 🔧  :wrench: ツール（Tooling）
+# 🚨  :rotating_light: テスト（Tests）
+# 💩  :hankey: 非推奨追加（Deprecation）
+# 🚧  :construction: WIP（Work In Progress）
+
+
+# ==================== Format ====================
+# :emoji: Subject
+#
+# Commit body...
