@@ -4,8 +4,11 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+	-- gitsigns
+	use 'lewis6991/gitsigns.nvim'
+
 	-- autopairs
-	use('windwp/nvim-autopairs')
+	use 'windwp/nvim-autopairs' 
 
 	-- telescope
 	use {

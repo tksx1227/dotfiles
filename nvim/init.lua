@@ -5,16 +5,18 @@
 -- |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 --
 
--- Read plugins
-require('plugins.packer')
-vim.cmd[[autocmd BufWritePost packer.lua PackerCompile]]
-
--- Read base config
+-- Read base config files
 require('config.options')
 require('config.keymap')
 require('config.colorscheme')
 
--- Read plugins config
+-- Read plugins
+require('plugins.packer')
+vim.cmd[[autocmd BufWritePost packer.lua PackerCompile]]
+
+-- Read plugin config files
 require('plugins.telescope')
 require('plugins.lualine')
 require('plugins.neo-tree')
+require('plugins.nvim-autopairs')
+require('plugins.gitsigns')
