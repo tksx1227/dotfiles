@@ -3,8 +3,6 @@ local actions = require "telescope.actions"
 
 require('telescope').setup{
 	defaults = {
-		-- Default configuration for telescope goes here:
-		-- config_key = value,
 		mappings = {
 			i = {
 				["<C-h>"] = "which_key",
@@ -16,24 +14,16 @@ require('telescope').setup{
 			}
 		}
 	},
-	pickers = {
-		-- Default configuration for builtin pickers goes here:
-		-- picker_name = {
-		--   picker_config_key = value,
-		--   ...
-		-- }
-		-- Now the picker_config_key will be applied every time you call this
-		-- builtin picker
-	},
+	pickers = {},
 	extensions = {
-		-- Your extension configuration goes here:
-		-- extension_name = {
-		--   extension_config_key = value,
-		-- }
-		-- please take a look at the readme of the extension you want to configure
+		frecency = {
+			ignore_patterns = { "*.git/*", "*/tmp/*", "*/node_modules/*" },
+			db_safe_mode = false
+		},
 	}
 }
 
+-- Base {{{
 map(
 	'n',
 	'<Leader>ff',
@@ -61,3 +51,13 @@ map(
 	':lua require("telescope.builtin").help_tags()<cr>',
 	{noremap = true, silent = true}
 )
+-- }}}
+
+-- Extension {{{
+map(
+	"n",
+	"<leader><leader>",
+	"<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>",
+	{noremap = true, silent = true}
+)
+-- }}}
