@@ -1,23 +1,23 @@
 local map = vim.api.nvim_set_keymap
-local actions = require "telescope.actions"
+local actions = require 'telescope.actions'
 
 require('telescope').setup{
 	defaults = {
 		mappings = {
 			i = {
-				["<C-h>"] = "which_key",
-				["<C-j>"] = actions.move_selection_next,
-				["<C-k>"] = actions.move_selection_previous,
+				['<C-h>'] = 'which_key',
+				['<C-j>'] = actions.move_selection_next,
+				['<C-k>'] = actions.move_selection_previous,
 			},
 			n = {
-				["<C-c>"] = actions.close,
+				['<C-c>'] = actions.close,
 			}
 		}
 	},
 	pickers = {},
 	extensions = {
 		frecency = {
-			ignore_patterns = { "*.git/*", "*/tmp/*", "*/node_modules/*" },
+			ignore_patterns = { '*.git/*', '*/tmp/*', '*/node_modules/*' },
 			db_safe_mode = false
 		},
 	}
@@ -55,9 +55,9 @@ map(
 
 -- Extension {{{
 map(
-	"n",
-	"<leader><leader>",
-	"<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>",
+	'n',
+	'<leader><leader>',
+	'<Cmd>lua require("telescope").extensions.frecency.frecency()<CR>',
 	{noremap = true, silent = true}
 )
 -- }}}

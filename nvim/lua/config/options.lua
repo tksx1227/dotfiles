@@ -27,7 +27,8 @@ set.syntax = 'on' -- シンタックスハイライトを有効化
 
 -- Tab {{{
 set.list = true
-set.listchars = 'tab:▸-,lead:·,trail:·,eol:$' -- Tab文字を可視化
+-- set.listchars = 'tab:▸-,lead:·,trail:·,eol:$' -- Tab文字を可視化
+set.listchars = 'tab:| ,lead:·,trail:·,eol:$' -- Tab文字を可視化
 set.expandtab = false -- Tab文字を半角スペースにしない
 set.tabstop = 4 -- 行頭以外のTab文字の表示幅(スペースいくつ分)
 set.shiftwidth = 4 -- 行頭でのTab文字の表示幅
