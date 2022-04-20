@@ -4,6 +4,9 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+	-- autopairs
+	use('windwp/nvim-autopairs')
+
 	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim',
