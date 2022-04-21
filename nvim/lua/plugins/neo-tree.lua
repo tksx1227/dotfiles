@@ -1,8 +1,5 @@
 local map = vim.api.nvim_set_keymap
 
-map('n', '<C-n>', ':Neotree<CR>', {noremap = true})
-map('n', '\\', ':Neotree reveal<cr>', {noremap = true})
-
 vim.g.neo_tree_remove_legacy_commands = 1
 
 -- If you want icons for diagnostic errors, you'll need to define them somewhere:
@@ -160,7 +157,7 @@ require("neo-tree").setup({
 		window = {
 			position = "float",
 			mappings = {
-				["a"]  = "git_add_all",
+				["gA"] = "git_add_all",
 				["gu"] = "git_unstage_file",
 				["ga"] = "git_add_file",
 				["gr"] = "git_revert_file",
@@ -171,3 +168,8 @@ require("neo-tree").setup({
 		}
 	}
 })
+
+map('n', '<C-g>n', ':Neotree<CR>', {noremap = true, silent = true})
+map('n', '<C-g>b', ':Neotree buffers<CR>', {noremap = true, silent = true})
+map('n', '<C-g>g', ':Neotree git_status<CR>', {noremap = true, silent = true})
+map('n', '\\', ':Neotree reveal<cr>', {noremap = true})

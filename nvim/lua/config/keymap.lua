@@ -17,6 +17,10 @@ map('n', '<Leader>j', '<C-w>j', {noremap = true, silent = true})
 map('n', '<Leader>k', '<C-w>k', {noremap = true, silent = true})
 map('n', '<Leader>l', '<C-w>l', {noremap = true, silent = true})
 
+-- タブ操作系
+map('n', '<C-l>', 'gt', {noremap = true})
+map('n', '<C-h>', 'gT', {noremap = true})
+
 -- 移動系
 map('n', 'H', '^', {noremap = true})
 map('n', 'L', '$', {noremap = true})
@@ -24,3 +28,7 @@ map('n', 'L', '$', {noremap = true})
 -- フォーマット系
 map('n', '>', '>>', {noremap = true})
 map('n', '<', '<<', {noremap = true})
+
+-- スクロール系
+map('n', '<C-j>', '<C-e>', {noremap = true})
+map('n', '<C-k>', '<C-y>', {noremap = true})
