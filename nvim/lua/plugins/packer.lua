@@ -7,6 +7,9 @@ return require('packer').startup(function()
 	-- tokyonight
 	use 'folke/tokyonight.nvim'
 
+	-- comment
+	use 'numToStr/Comment.nvim'
+
 	-- tree-sitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
