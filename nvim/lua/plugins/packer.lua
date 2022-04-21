@@ -4,6 +4,12 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+	-- tokyonight
+	use 'folke/tokyonight.nvim'
+
+	-- scrollbar
+	use 'petertriho/nvim-scrollbar'
+
 	-- gitsigns
 	use 'lewis6991/gitsigns.nvim'
 
