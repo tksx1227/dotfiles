@@ -7,6 +7,12 @@ return require('packer').startup(function()
 	-- tokyonight
 	use 'folke/tokyonight.nvim'
 
+	-- tree-sitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
+
 	-- scrollbar
 	use 'petertriho/nvim-scrollbar'
 
