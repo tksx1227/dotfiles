@@ -3,6 +3,7 @@
 	email = tmrtkm1227tksx@gmail.com
 [core]
 	editor = nvim
+	excludesfile = ~/.config/git/.gitignore_global
 [color]
 	ui = auto
 [alias]
