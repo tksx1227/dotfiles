@@ -16,6 +16,9 @@ return require('packer').startup(function()
 		run = ':TSUpdate'
 	}
 
+	-- toggleterm
+	use 'akinsho/toggleterm.nvim'
+
 	-- scrollbar
 	use 'petertriho/nvim-scrollbar'
 
