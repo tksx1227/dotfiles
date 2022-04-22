@@ -34,3 +34,6 @@ map('n', '<', '<<', {noremap = true})
 -- スクロール系
 map('n', '<C-j>', '<C-e>', {noremap = true})
 map('n', '<C-k>', '<C-y>', {noremap = true})
+
+-- １文字削除でヤンクしない
+map('n', 'x', '"_x', {noremap = true})

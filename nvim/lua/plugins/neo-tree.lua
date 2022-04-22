@@ -23,7 +23,7 @@ vim.fn.sign_define(
 -- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
-	close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
+	close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
 	popup_border_style = "rounded",
 	enable_git_status = true,
 	enable_diagnostics = true,
@@ -72,6 +72,14 @@ require("neo-tree").setup({
 			}
 		},
 	},
+	event_handlers = {
+		{
+			event = "file_added",
+			handler = function(file_path)
+				require("neo-tree.utils").open_file({}, file_path)
+			end,
+		},
+	},
 	window = {
 		position = "left",
 		width = 36,
@@ -80,9 +88,9 @@ require("neo-tree").setup({
 			nowait = true,
 		},
 		mappings = {
-			["<space>"] = { 
-				"toggle_node", 
-				nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
+			["<space>"] = {
+				"toggle_node",
+				nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
 			},
 			["<2-LeftMouse>"] = "open",
 			["<cr>"] = "open",
@@ -123,7 +131,7 @@ require("neo-tree").setup({
 				".git"
 			},
 		},
-		follow_current_file = true, -- This will find and focus the file in the active buffer every
+		follow_current_file = false, -- This will find and focus the file in the active buffer every
 		-- time the current file is changed while the tree is open.
 		hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
 		-- in whatever position is specified in window.position
