@@ -15,7 +15,7 @@ return require('packer').startup(function()
 	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	-- Telescope Extension
 	use {
@@ -23,7 +23,7 @@ return require('packer').startup(function()
 		config = function()
 			require'telescope'.load_extension('frecency')
 		end,
-		requires = {'tami5/sqlite.lua'}
+		requires = { 'tami5/sqlite.lua' }
 	}
 
 	-----------------------------------
@@ -31,7 +31,7 @@ return require('packer').startup(function()
 	use {
 		'nvim-neo-tree/neo-tree.nvim',
 		branch = 'v2.x',
-		requires = { 
+		requires = {
 			'nvim-lua/plenary.nvim',
 			'kyazdani42/nvim-web-devicons', -- not strictly required, but recommended
 			'MunifTanjim/nui.nvim',
@@ -52,7 +52,15 @@ return require('packer').startup(function()
 	-- Status Line
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		requires = 'kyazdani42/nvim-web-devicons',
+	}
+
+	-----------------------------------
+	-- Buffer Line
+	use {
+		'akinsho/bufferline.nvim',
+		tag = "*",
+		requires = 'kyazdani42/nvim-web-devicons',
 	}
 
 	-----------------------------------
