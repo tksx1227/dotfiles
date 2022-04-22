@@ -16,6 +16,9 @@ return require('packer').startup(function()
 		run = ':TSUpdate'
 	}
 
+	-- indent-blankline
+	use "lukas-reineke/indent-blankline.nvim"
+
 	-- toggleterm
 	use 'akinsho/toggleterm.nvim'
 

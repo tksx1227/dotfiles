@@ -24,11 +24,12 @@ set.showcmd = true -- 入力中のコマンドステータスを表示する
 set.background = 'dark' -- 背景をダークモードに設定
 set.syntax = 'on' -- シンタックスハイライトを有効化
 set.cursorline = true -- 行をハイライト
+set.list = true -- スペースと改行を可視化
+set.listchars:append("space:⋅")
+set.listchars:append("eol:↴")
 -- }}}
 
 -- Tab {{{
-set.list = true
-set.listchars = 'tab:| ,lead:·,trail:·,eol:$' -- Tab文字を可視化
 set.expandtab = false -- Tab文字を半角スペースにしない
 set.tabstop = 4 -- 行頭以外のTab文字の表示幅(スペースいくつ分)
 set.shiftwidth = 4 -- 行頭でのTab文字の表示幅

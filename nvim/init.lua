@@ -16,6 +16,7 @@ vim.cmd[[autocmd BufWritePost packer.lua PackerCompile]]
 
 -- Read plugin config files
 require('plugins.telescope')
+require('plugins.comment')
 require('plugins.lualine')
 require('plugins.neo-tree')
 require('plugins.nvim-autopairs')
@@ -23,3 +24,4 @@ require('plugins.gitsigns')
 require('plugins.nvim-scrollbar')
 require('plugins.nvim-treesitter')
 require('plugins.toggleterm')
+require('plugins.indent-blankline')

@@ -22,6 +22,8 @@ map('n', '<C-l>', 'gt', {noremap = true})
 map('n', '<C-h>', 'gT', {noremap = true})
 
 -- 移動系
+map('n', 'j', 'gj', {noremap = true})
+map('n', 'k', 'gk', {noremap = true})
 map('n', 'H', '^', {noremap = true})
 map('n', 'L', '$', {noremap = true})
 
