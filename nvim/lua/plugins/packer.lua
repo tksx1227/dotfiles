@@ -1,42 +1,23 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-	-- Packer can manage itself
+
+	----------------------------------------------------------------
+	-- Plugin Manager
+
+	-- Packer
 	use 'wbthomason/packer.nvim'
 
-	-- tokyonight
-	use 'folke/tokyonight.nvim'
+	----------------------------------------------------------------
+	-- Finder
 
-	-- comment
-	use 'numToStr/Comment.nvim'
-
-	-- tree-sitter
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
-
-	-- indent-blankline
-	use "lukas-reineke/indent-blankline.nvim"
-
-	-- toggleterm
-	use 'akinsho/toggleterm.nvim'
-
-	-- scrollbar
-	use 'petertriho/nvim-scrollbar'
-
-	-- gitsigns
-	use 'lewis6991/gitsigns.nvim'
-
-	-- autopairs
-	use 'windwp/nvim-autopairs' 
-
-	-- telescope
+	-----------------------------------
+	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	-- telescope.extension
+	-- Telescope Extension
 	use {
 		'nvim-telescope/telescope-frecency.nvim',
 		config = function()
@@ -45,13 +26,8 @@ return require('packer').startup(function()
 		requires = {'tami5/sqlite.lua'}
 	}
 
-	-- lualine
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
-
-	-- neo-tree
+	-----------------------------------
+	-- Neo-tree
 	use {
 		'nvim-neo-tree/neo-tree.nvim',
 		branch = 'v2.x',
@@ -61,4 +37,39 @@ return require('packer').startup(function()
 			'MunifTanjim/nui.nvim',
 		}
 	}
+
+	----------------------------------------------------------------
+	-- Appearance
+
+	-----------------------------------
+	-- Tree-Sitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
+
+	-----------------------------------
+	-- Status Line
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	-----------------------------------
+	-- ColorScheme
+	use 'folke/tokyonight.nvim'
+
+	----------------------------------------------------------------
+	-- Git
+
+	use 'lewis6991/gitsigns.nvim'
+
+	----------------------------------------------------------------
+	-- Utils
+
+	use 'petertriho/nvim-scrollbar'
+	use "lukas-reineke/indent-blankline.nvim"
+	use 'numToStr/Comment.nvim'
+	use 'windwp/nvim-autopairs'
+
 end)
