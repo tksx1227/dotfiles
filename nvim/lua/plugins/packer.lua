@@ -27,9 +27,17 @@ return require('packer').startup(function()
 	use {
 		'onsails/lspkind-nvim',
 		event = 'VimEnter',
-		config = function ()
+		config = function()
 			require('plugins.lspkind-nvim')
 		end,
+	}
+	use {
+		'folke/trouble.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
+		event = 'VimEnter',
+		config = function()
+			require('plugins.trouble')
+		end
 	}
 	use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' }
 	use { 'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp' }
@@ -132,7 +140,7 @@ return require('packer').startup(function()
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',
 		event = 'VimEnter',
-		config = function ()
+		config = function()
 			require('plugins.nvim-treesitter')
 		end,
 	}
@@ -143,7 +151,7 @@ return require('packer').startup(function()
 		'nvim-lualine/lualine.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
 		event = 'VimEnter',
-		config = function ()
+		config = function()
 			require('plugins.lualine')
 		end,
 	}
@@ -195,7 +203,7 @@ return require('packer').startup(function()
 
 	-----------------------------------
 	-- Snippets
-	use	{
+	use {
 		'L3MON4D3/LuaSnip',
 		-- event = 'VimEnter',
 		config = function()
@@ -215,7 +223,7 @@ return require('packer').startup(function()
 
 	-----------------------------------
 	-- Brackets
-	use	{
+	use {
 		'windwp/nvim-autopairs',
 		event = 'VimEnter',
 		config = function()
