@@ -15,8 +15,6 @@ require('plugins.packer')
 vim.cmd[[autocmd BufWritePost packer.lua PackerCompile]]
 
 -- Read plugin config files
-require('plugins.lualine')
 require('plugins.neo-tree')
 require('plugins.gitsigns')
-require('plugins.nvim-treesitter')
 require('plugins.bufferline')

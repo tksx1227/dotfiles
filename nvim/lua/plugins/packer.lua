@@ -96,7 +96,7 @@ return require('packer').startup(function()
 		requires = 'tami5/sqlite.lua',
 		after = 'telescope.nvim',
 		config = function()
-			require 'telescope'.load_extension('frecency')
+			require('telescope').load_extension('frecency')
 		end,
 	}
 
@@ -104,12 +104,12 @@ return require('packer').startup(function()
 	-- Neo-tree
 	use {
 		'nvim-neo-tree/neo-tree.nvim',
-		branch = 'v2.x',
+		branch = 'main',
 		requires = {
 			'nvim-lua/plenary.nvim',
 			'kyazdani42/nvim-web-devicons', -- not strictly required, but recommended
 			'MunifTanjim/nui.nvim',
-		}
+		},
 	}
 
 	----------------------------------------------------------------
@@ -130,7 +130,11 @@ return require('packer').startup(function()
 	-- Tree-Sitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
+		run = ':TSUpdate',
+		event = 'VimEnter',
+		config = function ()
+			require('plugins.nvim-treesitter')
+		end,
 	}
 
 	-----------------------------------
@@ -138,6 +142,10 @@ return require('packer').startup(function()
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
+		event = 'VimEnter',
+		config = function ()
+			require('plugins.lualine')
+		end,
 	}
 
 	-----------------------------------
@@ -146,6 +154,27 @@ return require('packer').startup(function()
 		'akinsho/bufferline.nvim',
 		tag = '*',
 		requires = 'kyazdani42/nvim-web-devicons',
+	}
+
+	-----------------------------------
+	-- Scrollbar
+	use {
+		'petertriho/nvim-scrollbar',
+		event = 'VimEnter',
+		after = 'tokyonight.nvim',
+		config = function()
+			require('plugins.nvim-scrollbar')
+		end,
+	}
+
+	-----------------------------------
+	-- Indent
+	use {
+		'lukas-reineke/indent-blankline.nvim',
+		event = 'VimEnter',
+		config = function()
+			require('plugins.indent-blankline')
+		end,
 	}
 
 	-----------------------------------
@@ -158,15 +187,20 @@ return require('packer').startup(function()
 	use 'lewis6991/gitsigns.nvim'
 
 	----------------------------------------------------------------
-	-- Utils
+	-- Coding
 
-	use {
-		'lukas-reineke/indent-blankline.nvim',
-		event = 'VimEnter',
+	-----------------------------------
+	-- Snippets
+	use	{
+		'L3MON4D3/LuaSnip',
+		-- event = 'VimEnter',
 		config = function()
-			require('plugins.indent-blankline')
+			require('plugins.luasnip')
 		end,
 	}
+
+	-----------------------------------
+	-- Comment
 	use {
 		'numToStr/Comment.nvim',
 		event = 'VimEnter',
@@ -174,11 +208,14 @@ return require('packer').startup(function()
 			require('plugins.comment')
 		end,
 	}
-	use {
-		'petertriho/nvim-scrollbar',
+
+	-----------------------------------
+	-- Brackets
+	use	{
+		'windwp/nvim-autopairs',
 		event = 'VimEnter',
 		config = function()
-			require('plugins.nvim-scrollbar')
+			require('plugins.nvim-autopairs')
 		end,
 	}
 
