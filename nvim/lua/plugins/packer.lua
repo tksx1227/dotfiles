@@ -181,6 +181,10 @@ return require('packer').startup(function()
 	-- ColorScheme
 	use 'folke/tokyonight.nvim'
 
+	-----------------------------------
+	-- Background
+	use 'xiyaowong/nvim-transparent'
+
 	----------------------------------------------------------------
 	-- Git
 
