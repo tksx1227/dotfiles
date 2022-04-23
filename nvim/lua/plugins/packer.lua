@@ -19,27 +19,18 @@ return require('packer').startup(function()
 	-- Auto Completion
 	use {
 		'hrsh7th/nvim-cmp',
-		requires = {
-			{
-				'L3MON4D3/LuaSnip',
-				event = 'VimEnter',
-				config = function()
-					require('plugins.luasnip')
-				end,
-			},
-			{
-				'windwp/nvim-autopairs',
-				event = 'VimEnter',
-				config = function()
-					require('plugins.nvim-autopairs')
-				end,
-			},
-		},
+		after = { 'LuaSnip', 'nvim-autopairs', 'lspkind-nvim' },
 		config = function()
 			require('plugins.nvim-cmp')
 		end,
 	}
-	use { 'onsails/lspkind.nvim' }
+	use {
+		'onsails/lspkind-nvim',
+		event = 'VimEnter',
+		config = function ()
+			require('plugins.lspkind-nvim')
+		end,
+	}
 	use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' }
 	use { 'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp' }
 	use { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' }
@@ -72,13 +63,6 @@ return require('packer').startup(function()
 	}
 	use {
 		'williamboman/nvim-lsp-installer',
-		requires = {
-			'RRethy/vim-illuminate',
-			opt = true,
-			config = function()
-				requires('plugins.vim-illuminate')
-			end,
-		},
 		after = { 'nvim-lspconfig', 'vim-illuminate', 'nlsp-settings.nvim', 'cmp-nvim-lsp' },
 		config = function()
 			require('plugins.nvim-lsp-installer')
@@ -86,7 +70,7 @@ return require('packer').startup(function()
 	}
 	use {
 		'tamago324/nlsp-settings.nvim',
-		after = { 'nvim-lspconfig' },
+		after = 'nvim-lspconfig',
 		config = function()
 			require('plugins.nlsp-settings')
 		end,
@@ -130,6 +114,17 @@ return require('packer').startup(function()
 
 	----------------------------------------------------------------
 	-- Appearance
+
+	--------------------------------
+	-- Syntax
+
+	use {
+		'RRethy/vim-illuminate',
+		event = 'VimEnter',
+		config = function()
+			require('plugins.vim-illuminate')
+		end,
+	}
 
 	-----------------------------------
 	-- Tree-Sitter

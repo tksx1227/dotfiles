@@ -8,7 +8,7 @@ end
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+			luasnip.lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
 	window = {
@@ -111,3 +111,45 @@ cmp.setup({
 		{ name = "dictionary", keyword_length = 2, priority = 10 },
 	}),
 })
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline("/", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "nvim_lsp_document_symbol" },
+	}, {
+		{ name = "buffer" },
+	}),
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(":", {
+	mapping = {
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end, { "c" }),
+
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end, { "c" }),
+		["<C-y>"] = {
+			c = cmp.mapping.confirm({ select = false }),
+		},
+		["<C-q>"] = {
+			c = cmp.mapping.abort(),
+		},
+	},
+	sources = cmp.config.sources({ { name = "path" } }, { { name = "cmdline" } }),
+})
+
+-- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
