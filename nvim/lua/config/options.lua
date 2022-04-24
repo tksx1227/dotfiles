@@ -30,6 +30,7 @@ set.showcmd = true -- 入力中のコマンドステータスを表示する
 set.background = 'dark' -- 背景をダークモードに設定
 set.syntax = 'on' -- シンタックスハイライトを有効化
 set.termguicolors = true -- termguicolorsを有効化
+set.signcolumn = 'yes' -- 左にスペースを開ける
 set.cursorline = true -- 行をハイライト
 set.list = true -- スペースと改行を可視化
 set.listchars:append("space:⋅")
