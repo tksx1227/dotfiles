@@ -24,3 +24,6 @@
 	defaultBranch = main
 [commit]
 	template = ~/.config/git/.commit_template
+[pull]
+	rebase = false
+	ff = only
