@@ -231,4 +231,16 @@ return require('packer').startup(function()
 		end,
 	}
 
+	----------------------------------------------------------------
+	-- Jump
+
+	use {
+		'phaazon/hop.nvim',
+		branch = 'v1', -- optional but strongly recommended
+		event = 'VimEnter',
+		config = function()
+			require('plugins.hop')
+		end
+	}
+
 end)
