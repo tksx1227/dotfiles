@@ -17,5 +17,3 @@ vim.cmd[[autocmd BufWritePost packer.lua PackerCompile]]
 -- Read plugin config files
 require('plugins.nvim-transparent')
 require('plugins.neo-tree')
-require('plugins.gitsigns')
-require('plugins.bufferline')

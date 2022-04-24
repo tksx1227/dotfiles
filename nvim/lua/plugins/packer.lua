@@ -169,6 +169,10 @@ return require('packer').startup(function()
 		'akinsho/bufferline.nvim',
 		tag = '*',
 		requires = 'kyazdani42/nvim-web-devicons',
+		event = 'VimEnter',
+		config = function()
+			require('plugins.bufferline')
+		end,
 	}
 
 	-----------------------------------
@@ -204,7 +208,14 @@ return require('packer').startup(function()
 	----------------------------------------------------------------
 	-- Git
 
-	use 'lewis6991/gitsigns.nvim'
+	use {
+		'lewis6991/gitsigns.nvim',
+		opt = true,
+		event = 'VimEnter',
+		config = function()
+			require('plugins.gitsigns')
+		end
+	}
 
 	----------------------------------------------------------------
 	-- Coding
@@ -244,7 +255,6 @@ return require('packer').startup(function()
 
 	use {
 		'kevinhwang91/nvim-hlslens',
-		opt = true,
 		event = 'VimEnter',
 		config = function()
 			require('plugins.nvim-hlslens')
