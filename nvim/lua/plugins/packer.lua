@@ -133,6 +133,13 @@ return require('packer').startup(function()
 			require('plugins.vim-illuminate')
 		end,
 	}
+	use {
+		'norcalli/nvim-colorizer.lua',
+		event = 'VimEnter',
+		config = function()
+			require('plugins.nvim-colorizer')
+		end,
+	}
 
 	-----------------------------------
 	-- Tree-Sitter
