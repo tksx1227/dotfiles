@@ -175,8 +175,9 @@ return require('packer').startup(function()
 	-- Scrollbar
 	use {
 		'petertriho/nvim-scrollbar',
+		opt = true,
 		event = 'VimEnter',
-		after = 'tokyonight.nvim',
+		after = { 'tokyonight.nvim', 'nvim-hlslens' },
 		config = function()
 			require('plugins.nvim-scrollbar')
 		end,
@@ -235,6 +236,18 @@ return require('packer').startup(function()
 		event = 'VimEnter',
 		config = function()
 			require('plugins.nvim-autopairs')
+		end,
+	}
+
+	----------------------------------------------------------------
+	-- Search
+
+	use {
+		'kevinhwang91/nvim-hlslens',
+		opt = true,
+		event = 'VimEnter',
+		config = function()
+			require('plugins.nvim-hlslens')
 		end,
 	}
 
