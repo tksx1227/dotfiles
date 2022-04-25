@@ -40,3 +40,8 @@ map('n', 'x', '"_x', { noremap = true })
 map('n', 'G', '<Nop>', { noremap = true, silent = true })
 map('n', '[git]', '<Nop>', { noremap = true, silent = true })
 map('n', 'G', '[git]', {})
+
+-- [lsp]
+map('n', "'", '<Nop>', { noremap = true, silent = true })
+map('n', '[lsp]', '<Nop>', { noremap = true, silent = true })
+map('n', "'", '[lsp]', {})

@@ -85,6 +85,16 @@ return require('packer').startup(function()
 	}
 	use { 'weilbith/nvim-lsp-smag', after = 'nvim-lspconfig' }
 
+	--------------------------------
+	-- LSP's UI
+	use {
+		'tami5/lspsaga.nvim',
+		after = 'nvim-lsp-installer',
+		config = function ()
+			require('plugins.lspsaga')
+		end
+	}
+
 	----------------------------------------------------------------
 	-- Finder
 
