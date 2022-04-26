@@ -90,7 +90,7 @@ return require('packer').startup(function()
 	use {
 		'tami5/lspsaga.nvim',
 		after = 'nvim-lsp-installer',
-		config = function ()
+		config = function()
 			require('plugins.lspsaga')
 		end
 	}
@@ -108,7 +108,7 @@ return require('packer').startup(function()
 			require("plugins.telescope")
 		end,
 	}
-	-- Telescope Extension
+
 	use {
 		'nvim-telescope/telescope-frecency.nvim',
 		requires = 'tami5/sqlite.lua',
@@ -168,6 +168,7 @@ return require('packer').startup(function()
 		'nvim-lualine/lualine.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
 		event = 'VimEnter',
+		after = 'tokyonight.nvim',
 		config = function()
 			require('plugins.lualine')
 		end,
