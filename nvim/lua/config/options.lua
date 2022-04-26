@@ -1,17 +1,15 @@
-local g = vim.g
 local set = vim.opt
 
 ---------------------------------------
 -- Base
-g.mapleader = ' ' -- スペースをleaderにする
 set.fenc = 'utf8' -- 文字コードをUTF-8に設定
 set.shell = '/bin/zsh' -- デフォルトのシェルをbashに設定
 set.belloff = 'all' -- ビープ音を消す
 set.mouse = 'a' -- マウスを有効化
-set.clipboard = "unnamedplus,unnamed," .. vim.o.clipboard -- OSのクリップボードを使用する
+set.clipboard = 'unnamedplus,unnamed,' .. vim.o.clipboard -- OSのクリップボードを使用する
 set.updatetime = 300 -- アップデートを300msごとに行う
 set.wildmenu = true -- コマンド補完を強化
-set.wildmode = "longest,list,full" -- リスト表示，最長マッチ
+set.wildmode = 'longest,list,full' -- リスト表示，最長マッチ
 
 ---------------------------------------
 -- Files
@@ -33,12 +31,12 @@ set.termguicolors = true -- termguicolorsを有効化
 set.signcolumn = 'yes' -- 左にスペースを開ける
 set.cursorline = true -- 行をハイライト
 set.list = true -- スペースと改行を可視化
-set.listchars:append("space:⋅")
-set.listchars:append("eol:↴")
+set.listchars:append('space:⋅')
+set.listchars:append('eol:↴')
 
 ---------------------------------------
 -- Tab
-set.expandtab = false -- Tab文字を半角スペースにしない
+set.expandtab = true -- Tab文字を半角スペースにする
 set.tabstop = 4 -- 行頭以外のTab文字の表示幅(スペースいくつ分)
 set.shiftwidth = 4 -- 行頭でのTab文字の表示幅
 

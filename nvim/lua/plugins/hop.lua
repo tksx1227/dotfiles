@@ -1,6 +1,6 @@
 require('hop').setup {
-	keys = 'etovxqpdygfblzhckisuran',
-	jump_on_sole_occurrence = false,
+    keys = 'etovxqpdygfblzhckisuran',
+    jump_on_sole_occurrence = false,
 }
 
 vim.api.nvim_set_keymap('n', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})

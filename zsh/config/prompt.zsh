@@ -9,9 +9,9 @@ setopt prompt_subst
 zstyle ':vcs_info:*' formats '(%r)-[%b]'
 zstyle ':vcs_info:*' actionformats '(%r)-[%b|%a]'
 precmd () {
-	psvar=()
-	LANG=en_US.UTF-8 vcs_info
-	[[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 local p_vcs="%1(v|%F{082}%1v%F|)"
 
