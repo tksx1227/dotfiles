@@ -1,4 +1,3 @@
-local map = vim.api.nvim_set_keymap
 local actions = require 'telescope.actions'
 
 require('telescope').setup {
@@ -22,38 +21,3 @@ require('telescope').setup {
         },
     }
 }
-
-map(
-    'n',
-    '<Leader>ff',
-    ':lua require("telescope.builtin").find_files()<cr>',
-    { noremap = true, silent = true }
-)
-
-map(
-    'n',
-    '<Leader>fg',
-    ':lua require("telescope.builtin").live_grep()<cr>',
-    { noremap = true, silent = true }
-)
-
-map(
-    'n',
-    '<Leader>fb',
-    ':lua require("telescope.builtin").buffers()<cr>',
-    { noremap = true, silent = true }
-)
-
-map(
-    'n',
-    '<Leader>fh',
-    ':lua require("telescope.builtin").help_tags()<cr>',
-    { noremap = true, silent = true }
-)
-
-map(
-    'n',
-    '<leader><leader>',
-    '<Cmd>lua require("telescope").extensions.frecency.frecency()<CR>',
-    { noremap = true, silent = true }
-)

@@ -48,23 +48,3 @@ require('bufferline').setup {
         -- sort_by = 'relative_directory'
     },
 }
-
-local map = vim.api.nvim_set_keymap
-local opt = { noremap = true, silent = true }
-
-map('n', '<Leader>1', ':BufferLineGoToBuffer 1<CR>', opt)
-map('n', '<Leader>2', ':BufferLineGoToBuffer 2<CR>', opt)
-map('n', '<Leader>3', ':BufferLineGoToBuffer 3<CR>', opt)
-map('n', '<Leader>4', ':BufferLineGoToBuffer 4<CR>', opt)
-map('n', '<Leader>5', ':BufferLineGoToBuffer 5<CR>', opt)
-map('n', '<Leader>6', ':BufferLineGoToBuffer 6<CR>', opt)
-map('n', '<Leader>7', ':BufferLineGoToBuffer 7<CR>', opt)
-map('n', '<Leader>8', ':BufferLineGoToBuffer 8<CR>', opt)
-map('n', '<Leader>9', ':BufferLineGoToBuffer 9<CR>', opt)
-
-map("n", "<Leader>b", "<Cmd>BufferLinePick<CR>", opt)
-map("n", "<Leader>c", "<Cmd>BufferLinePickClose<CR>", opt)
-map("n", "<C-h>", "<Cmd>BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", "<Cmd>BufferLineCycleNext<CR>", opt)
-map("n", "@", "<Cmd>BufferLineMovePrev<CR>", opt)
-map("n", "#", "<Cmd>BufferLineMoveNext<CR>", opt)

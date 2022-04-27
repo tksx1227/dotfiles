@@ -295,9 +295,6 @@ return require('packer').startup(function()
     use {
         'kevinhwang91/nvim-hlslens',
         event = 'VimEnter',
-        config = function()
-            require('plugins.nvim-hlslens')
-        end,
     }
 
     ----------------------------------------------------------------
