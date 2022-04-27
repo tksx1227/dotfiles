@@ -13,7 +13,3 @@ require('config.colorscheme')
 -- Read plugins
 require('plugins.packer')
 vim.cmd [[autocmd BufWritePost packer.lua PackerCompile]]
-
--- Read plugin config files
-require('plugins.nvim-transparent')
-require('plugins.neo-tree')

@@ -3,7 +3,7 @@ local set = vim.opt
 ---------------------------------------
 -- Base
 set.fenc = 'utf8' -- 文字コードをUTF-8に設定
-set.shell = '/bin/zsh' -- デフォルトのシェルをbashに設定
+set.shell = '/bin/zsh' -- デフォルトのシェルをzshに設定
 set.belloff = 'all' -- ビープ音を消す
 set.mouse = 'a' -- マウスを有効化
 set.clipboard = 'unnamedplus,unnamed,' .. vim.o.clipboard -- OSのクリップボードを使用する

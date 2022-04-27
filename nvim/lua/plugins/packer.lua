@@ -128,6 +128,9 @@ return require('packer').startup(function()
             'kyazdani42/nvim-web-devicons', -- not strictly required, but recommended
             'MunifTanjim/nui.nvim',
         },
+        config = function()
+            require('plugins.neo-tree')
+        end,
     }
 
     ----------------------------------------------------------------
@@ -214,7 +217,13 @@ return require('packer').startup(function()
 
     -----------------------------------
     -- Background
-    use 'xiyaowong/nvim-transparent'
+    use {
+        'xiyaowong/nvim-transparent',
+        event = 'VimEnter',
+        config = function()
+            require('plugins.nvim-transparent')
+        end,
+    }
 
     ----------------------------------------------------------------
     -- Git

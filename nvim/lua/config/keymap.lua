@@ -21,15 +21,13 @@ map('n', '<Leader>j', '<C-w>j', { noremap = true, silent = true })
 map('n', '<Leader>k', '<C-w>k', { noremap = true, silent = true })
 map('n', '<Leader>l', '<C-w>l', { noremap = true, silent = true })
 
--- タブ操作系
-map('n', '<C-l>', 'gt', { noremap = true })
-map('n', '<C-h>', 'gT', { noremap = true })
-
 -- 移動系
+map('n', 'H', '^', { noremap = true })
+map('n', 'L', '$', { noremap = true })
 map('n', 'j', 'gj', { noremap = true })
 map('n', 'k', 'gk', { noremap = true })
-map('n', 'gj', 'j', { noremap = true })
-map('n', 'gk', 'k', { noremap = true })
+map('n', 'gj', 'j', { noremap = true, silent = true })
+map('n', 'gk', 'k', { noremap = true, silent = true })
 map('n', 'Gk', 'gg', { noremap = true, silent = true })
 map('n', 'Gj', 'G', { noremap = true, silent = true })
 
@@ -43,9 +41,12 @@ map('n', '<C-k>', '<C-y>', { noremap = true })
 
 -- x, d, pでヤンクしない
 map('n', 'x', '"_x', { noremap = true })
+map('n', 'd', '"_d', { noremap = true })
 map('n', 'dd', '"_dd', { noremap = true, silent = true })
 map('v', 'd', '"_d', { noremap = true })
+map('n', 'D', 'd', { noremap = true })
 map('n', 'dD', 'dd', { noremap = true, silent = true })
+map('n', 'Dd', 'dd', { noremap = true, silent = true })
 map('n', 'DD', 'dd', { noremap = true, silent = true })
 map('v', 'D', 'd', { noremap = true })
 
