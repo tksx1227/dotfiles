@@ -237,6 +237,25 @@ return require('packer').startup(function()
         end
     }
 
+    use {
+        'TimUntersberger/neogit',
+        requires = 'nvim-lua/plenary.nvim',
+        event = 'VimEnter',
+        after = 'diffview.nvim',
+        config = function()
+            require('plugins.neogit')
+        end,
+    }
+
+    use {
+        'sindrets/diffview.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+        event = 'VimEnter',
+        config = function()
+            require('plugins.diffview')
+        end,
+    }
+
     ----------------------------------------------------------------
     -- Coding
 
