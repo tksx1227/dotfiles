@@ -1,0 +1,78 @@
+"-----------------------------------
+" Base
+"-----------------------------------
+set shell=/bin/zsh " デフォルトのシェルをbashに設定
+set clipboard=unnamed " クリップボードを共有する
+set autoread " 編集中のファイルが変更されたら自動で読み込み直す
+set vb t_vb= " ビープ音を消す
+set scrolloff=5 " スクロール中上下に余白を空ける
+set ideajoin
+
+"-----------------------------------
+" Search
+"-----------------------------------
+set ignorecase " 検索文字が小文字の場合は大文字と小文字を区別しない
+set smartcase " 検索文字に大文字がある場合は大文字と小文字を区別する
+set incsearch " 検索文字列入力時に順次対象文字列にヒットさせる
+set wrapscan " 最後まで行くと最初に戻る
+set hlsearch " 検索語をハイライト表示
+
+"-----------------------------------
+" Vim key mapping
+"-----------------------------------
+let mapleader="\<Space>"
+inoremap <silent> jj <Esc>
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+nnoremap H ^
+nnoremap L $
+nnoremap <C-j> <C-e>
+nnoremap <C-k> <C-y>
+nnoremap <leader>0 :noh<CR>
+nnoremap <leader>c :close<CR>
+
+nnoremap <silent> <Leader>\ :vs<CR>
+nnoremap <silent> <Leader>-  :sp<CR>
+nnoremap <silent> <Leader>h  <C-w>h
+nnoremap <silent> <Leader>j  <C-w>j
+nnoremap <silent> <Leader>k  <C-w>k
+nnoremap <silent> <Leader>l  <C-w>l
+
+nnoremap x "_x
+nnoremap d "_d
+vnoremap d "_d
+nnoremap <silent> dd "_dd
+nnoremap D d
+nnoremap <silent> dD dd
+nnoremap <silent> Dd dd
+nnoremap <silent> DD dd
+vnoremap D d
+
+"-----------------------------------
+" IdeaVim key mapping
+"-----------------------------------
+nnoremap [err] <Nop>
+nmap ' [err]
+nnoremap [err]n :action GotoNextError<CR>
+nnoremap [err]o :action ShowErrorDescription<CR>
+
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
+nnoremap <leader>d :action Debug<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap <leader>= :action ReformatCode<CR>
+nnoremap gcc :action CommentByLineComment<CR>
+vnoremap gc :action CommentByLineComment<CR>
+nnoremap <leader>r :action RenameElement<CR>
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
