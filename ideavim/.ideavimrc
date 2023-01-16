@@ -62,7 +62,8 @@ nnoremap [err]o :action ShowErrorDescription<CR>
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-nnoremap <leader>d :action Debug<CR>
+nnoremap gh :action QuickJavaDoc<CR>
+nnoremap <leader>D :action Debug<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gr :action FindUsages<CR>
 nnoremap <leader>= :action ReformatCode<CR>
@@ -70,9 +71,9 @@ nnoremap gcc :action CommentByLineComment<CR>
 vnoremap gc :action CommentByLineComment<CR>
 nnoremap <leader>r :action RenameElement<CR>
 
-map <leader>s <Action>(SelectInProjectView)
-map <leader>a <Action>(Annotate)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-map <leader>z <Action>(ToggleDistractionFreeMode)
-map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>o <Action>(FileStructurePopup)
+nmap <leader>s <Action>(SelectInProjectView)
+nmap <leader>a <Action>(Annotate)
+nmap <leader>p <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>z <Action>(ToggleDistractionFreeMode)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>o <Action>(FileStructurePopup)
