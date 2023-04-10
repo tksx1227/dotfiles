@@ -7,6 +7,16 @@ build: all
 .PHONY: all
 all: zsh git tmux vim nvim ideavim
 
+.PHONY: init
+init: homebrew
+
+.PHONY: homebrew
+homebrew:
+	@echo "\033[36mInstalling MacOS package manager Homebrew...\033[0m"
+	@sudo true
+	@curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sudo -u $$USER /bin/bash
+	@echo "Done!"
+
 .PHONY: zsh
 zsh:
 	@echo "\033[36mBuilding zsh configuration...\033[0m"
