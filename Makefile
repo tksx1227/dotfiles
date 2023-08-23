@@ -36,6 +36,7 @@ git: config
 tmux:
 	@echo "\033[36mBuilding tmux configuration...\033[0m"
 	@ln -svf ${PWD}/tmux/.tmux.conf ${HOME}/.tmux.conf
+	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	@echo "Done!"
 
 .PHONY: vim
