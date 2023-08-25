@@ -8,6 +8,8 @@ alias ll="ls -l"
 alias lla="ls -la"
 
 # Macのデフォルトソフトを使用しない
-alias ctags=$(brew --prefix)/opt/ctags/bin/ctags
-alias git=$(brew --prefix)/opt/git/bin/git
-alias swift=$(brew --prefix)/opt/swift/bin/swift
+if [ "$(uname)" = "Darwin" ]; then
+    alias ctags=$(brew --prefix)/opt/ctags/bin/ctags
+    alias git=$(brew --prefix)/opt/git/bin/git
+    alias swift=$(brew --prefix)/opt/swift/bin/swift
+fi
