@@ -11,7 +11,7 @@
 # Preload
 autoload -Uz colors && colors
 
-if [ -n ${DOTFILES_DIR} ]; then
+if [ -z "${DOTFILES_DIR}" ]; then
     DOTFILES_DIR=$HOME/dotfiles
 fi
 
