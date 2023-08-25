@@ -11,14 +11,16 @@
 # Preload
 autoload -Uz colors && colors
 
-SCRIPT_DIR=$HOME/dotfiles/zsh
+DOTFILES_DIR=$HOME/dotfiles
 
-source $SCRIPT_DIR/config/path.zsh
-source $SCRIPT_DIR/config/options.zsh
-source $SCRIPT_DIR/config/prompt.zsh
-source $SCRIPT_DIR/config/exports.zsh
-source $SCRIPT_DIR/config/alias.zsh
-source $SCRIPT_DIR/plugins/auto-completion.zsh
+source $DOTFILES_DIR/zsh/config/path.zsh
+source $DOTFILES_DIR/zsh/config/options.zsh
+source $DOTFILES_DIR/zsh/config/prompt.zsh
+source $DOTFILES_DIR/zsh/config/exports.zsh
+source $DOTFILES_DIR/zsh/config/alias.zsh
+source $DOTFILES_DIR/zsh/plugins/auto-completion.zsh
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
+
+. "/opt/homebrew/opt/asdf/libexec/asdf.sh"
