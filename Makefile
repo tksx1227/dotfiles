@@ -1,3 +1,4 @@
+DOTFILES_DIR := $(shell pwd)
 CONFIG_DIR := ${HOME}/.config
 GIT_DIR := ${CONFIG_DIR}/git
 
@@ -20,41 +21,41 @@ homebrew:
 .PHONY: zsh
 zsh:
 	@echo "\033[36mBuilding zsh configuration...\033[0m"
-	@ln -svf ${PWD}/zsh/.zshrc ${HOME}/.zshrc
+	@ln -svf ${DOTFILES_DIR}/zsh/.zshrc ${HOME}/.zshrc
 	@echo "Done!"
 
 .PHONY: git
 git: config
 	@echo "\033[36mBuilding git configuration...\033[0m"
 	@mkdir -p ${GIT_DIR}
-	@ln -svf ${PWD}/git/.gitconfig ${HOME}/.gitconfig
-	@ln -svf ${PWD}/git/.commit_template ${GIT_DIR}/.commit_template
-	@ln -svf ${PWD}/git/.gitignore_global ${GIT_DIR}/.gitignore_global
+	@ln -svf ${DOTFILES_DIR}/git/.gitconfig ${HOME}/.gitconfig
+	@ln -svf ${DOTFILES_DIR}/git/.commit_template ${GIT_DIR}/.commit_template
+	@ln -svf ${DOTFILES_DIR}/git/.gitignore_global ${GIT_DIR}/.gitignore_global
 	@echo "Done!"
 
 .PHONY: tmux
 tmux:
 	@echo "\033[36mBuilding tmux configuration...\033[0m"
-	@ln -svf ${PWD}/tmux/.tmux.conf ${HOME}/.tmux.conf
+	@ln -svf ${DOTFILES_DIR}/tmux/.tmux.conf ${HOME}/.tmux.conf
 	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	@echo "Done!"
 
 .PHONY: vim
 vim:
 	@echo "\033[36mBuilding vim configuration...\033[0m"
-	@ln -svf ${PWD}/vim/.vimrc ${HOME}/.vimrc
+	@ln -svf ${DOTFILES_DIR}/vim/.vimrc ${HOME}/.vimrc
 	@echo "Done!"
 
 .PHONY: nvim
 nvim: config
 	@echo "\033[36mBuilding neovim configuration...\033[0m"
-	@ln -svf ${PWD}/nvim ${CONFIG_DIR}/nvim
+	@ln -svf ${DOTFILES_DIR}/nvim ${CONFIG_DIR}/
 	@echo "Done!"
 
 .PHONY: ideavim
 ideavim:
 	@echo "\033[36mBuilding ideavim configuration...\033[0m"
-	@ln -svf ${PWD}/ideavim/.ideavimrc ${HOME}/.ideavimrc
+	@ln -svf ${DOTFILES_DIR}/ideavim/.ideavimrc ${HOME}/.ideavimrc
 	@echo "Done!"
 
 .PHONY: config
