@@ -11,7 +11,9 @@
 # Preload
 autoload -Uz colors && colors
 
-DOTFILES_DIR=$HOME/dotfiles
+if [ -n ${DOTFILES_DIR} ]; then
+    DOTFILES_DIR=$HOME/dotfiles
+fi
 
 source $DOTFILES_DIR/zsh/config/path.zsh
 source $DOTFILES_DIR/zsh/config/options.zsh
