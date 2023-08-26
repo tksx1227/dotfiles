@@ -2,6 +2,9 @@ DOTFILES_DIR := $(shell pwd)
 CONFIG_DIR := ${HOME}/.config
 GIT_DIR := ${CONFIG_DIR}/git
 
+TPM_REPO_SRC := https://github.com/tmux-plugins/tpm
+TPM_LOCAL_REPO := ${HOME}/.tmux/plugins/tpm
+
 .PHONY: build
 build: all
 
@@ -37,7 +40,7 @@ git: config
 tmux:
 	@echo "\033[36mBuilding tmux configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/tmux/.tmux.conf ${HOME}/.tmux.conf
-	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	@git clone "${TPM_REPO_SRC}" "${TPM_LOCAL_REPO}" 2> /dev/null || git -C "${TPM_LOCAL_REPO}" pull
 	@echo "Done!"
 
 .PHONY: vim
