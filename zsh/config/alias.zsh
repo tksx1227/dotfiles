@@ -6,6 +6,7 @@ alias ls="ls -FG"
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
+alias g="git"
 
 # Macのデフォルトソフトを使用しない
 if [ "$(uname)" = "Darwin" ]; then
