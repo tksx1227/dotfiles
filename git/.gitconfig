@@ -16,6 +16,9 @@
     d = diff
     ds = diff --staged
     rv = remote -v
+    ss = stash save
+    sp = stash pop
+    sl = stash list
     log1 = log -n 1
     log2 = log -n 2
     log3 = log -n 3
