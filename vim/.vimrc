@@ -53,6 +53,8 @@ vnoremap : ;
 inoremap <silent> jj <Esc>
 nnoremap H ^
 nnoremap L $
+nnoremap - <C-x>
+nnoremap + <C-a>
 
 nnoremap <silent> <Leader>\ :vs<CR>
 nnoremap <silent> <Leader>-  :sp<CR>

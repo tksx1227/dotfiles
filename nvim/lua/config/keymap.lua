@@ -12,6 +12,8 @@ map('n', ';', ':', { noremap = true })
 map('n', ':', ';', { noremap = true })
 map('v', ';', ':', { noremap = true })
 map('v', ':', ';', { noremap = true })
+map('n', '+', '<C-a>', { noremap = true })
+map('n', '-', '<C-x>', { noremap = true })
 
 -- ウィンドウ操作系
 map('n', '<Leader>\\', ':vs<CR>', { noremap = true, silent = true })
@@ -30,14 +32,6 @@ map('n', 'gj', 'j', { noremap = true, silent = true })
 map('n', 'gk', 'k', { noremap = true, silent = true })
 map('n', 'ggk', 'gg', { noremap = true, silent = true })
 map('n', 'ggj', 'G', { noremap = true, silent = true })
-
--- フォーマット系
-map('n', '>', '>>', { noremap = true })
-map('n', '<', '<<', { noremap = true })
-
--- スクロール系
-map('n', '<C-j>', '<C-e>', { noremap = true })
-map('n', '<C-k>', '<C-y>', { noremap = true })
 
 -- x, d, pでヤンクしない
 map('n', 'x', '"_x', { noremap = true })
