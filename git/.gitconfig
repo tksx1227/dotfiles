@@ -32,3 +32,5 @@
 [pull]
     rebase = false
     ff = only
+[rebase]
+	autostash = true
