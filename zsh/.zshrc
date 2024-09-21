@@ -14,6 +14,11 @@ if [ -z "${DOTFILES_DIR}" ]; then
     DOTFILES_DIR=$HOME/dotfiles
 fi
 
+source $DOTFILES_DIR/zsh/config/functions.zsh
+add_plugin "zsh-users/zsh-syntax-highlighting"
+add_plugin "zsh-users/zsh-autosuggestions"
+add_plugin "zsh-users/zsh-completions"
+
 source $DOTFILES_DIR/zsh/config/path.zsh
 source $DOTFILES_DIR/zsh/config/options.zsh
 source $DOTFILES_DIR/zsh/config/prompt.zsh
