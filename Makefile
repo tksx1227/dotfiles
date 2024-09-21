@@ -2,6 +2,7 @@ SEPARATOR:="\\033[36m===========================================================
 DOTFILES_DIR := $(shell pwd)
 CONFIG_DIR := ${HOME}/.config
 GIT_DIR := ${CONFIG_DIR}/git
+KITTY_DIR := ${CONFIG_DIR}/kitty
 
 # tmux
 TPM_REPO_SRC := https://github.com/tmux-plugins/tpm
@@ -22,6 +23,14 @@ homebrew:
 	@echo "\033[36m==> Installing MacOS package manager Homebrew...\033[0m"
 	@sudo true
 	@curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sudo -u $$USER /bin/bash
+	@echo "Done!"
+
+.PHONY: kitty
+kitty: config
+	@echo "${SEPARATOR}"
+	@echo "\033[36m==> Building kitty configuration...\033[0m"
+	@mkdir -p ${KITTY_DIR}
+	@ln -svf ${DOTFILES_DIR}/kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
 	@echo "Done!"
 
 .PHONY: zsh
