@@ -3,6 +3,7 @@ DOTFILES_DIR := $(shell pwd)
 CONFIG_DIR := ${HOME}/.config
 GIT_DIR := ${CONFIG_DIR}/git
 KITTY_DIR := ${CONFIG_DIR}/kitty
+ZSH_DIR := ${CONFIG_DIR}/zsh
 
 # tmux
 TPM_REPO_SRC := https://github.com/tmux-plugins/tpm
@@ -34,10 +35,12 @@ kitty: config
 	@echo "Done!"
 
 .PHONY: zsh
-zsh:
+zsh: config
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building zsh configuration...\033[0m"
-	@ln -svf ${DOTFILES_DIR}/zsh/.zshrc ${HOME}/.zshrc
+	@mkdir -p ${ZSH_DIR}
+	@ln -svf ${DOTFILES_DIR}/zsh/config/.zshenv ${HOME}/.zshenv
+	@ln -svf ${DOTFILES_DIR}/zsh/.zshrc ${ZSH_DIR}/.zshrc
 	@echo "Done!"
 
 .PHONY: git
