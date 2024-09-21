@@ -6,7 +6,6 @@ alias ls="ls -FG"
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
-alias g="git"
 
 # Macのデフォルトソフトを使用しない
 if [ "$(uname)" = "Darwin" ]; then
@@ -14,3 +13,8 @@ if [ "$(uname)" = "Darwin" ]; then
     alias git=$(brew --prefix)/opt/git/bin/git
     alias swift=$(brew --prefix)/opt/swift/bin/swift
 fi
+
+# Config
+alias kittyconf="vi ~/.config/kitty/kitty.conf"
+alias tmuxconf="vi ~/.tmux.conf"
+alias vimrc="vi ~/.vimrc"
