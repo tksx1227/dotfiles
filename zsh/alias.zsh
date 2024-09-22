@@ -18,3 +18,4 @@ fi
 alias kittyconf="vi ~/.config/kitty/kitty.conf"
 alias tmuxconf="vi ~/.tmux.conf"
 alias vimrc="vi ~/.vimrc"
+alias dotfiles="vi ~/dotfiles"
