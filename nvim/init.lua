@@ -6,8 +6,9 @@
 --
 
 
--- Read base config files
+-- Base configs
 require('config.options')
 require('config.keymap')
--- require('config.colorscheme')
+
+-- Plugins managed by lazy
 require('config.lazy')
