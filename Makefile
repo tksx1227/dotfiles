@@ -39,8 +39,15 @@ zsh: config
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building zsh configuration...\033[0m"
 	@mkdir -p ${ZSH_DIR}
-	@ln -svf ${DOTFILES_DIR}/zsh/config/.zshenv ${HOME}/.zshenv
+	@ln -svf ${DOTFILES_DIR}/zsh/.zshenv ${HOME}/.zshenv
 	@ln -svf ${DOTFILES_DIR}/zsh/.zshrc ${ZSH_DIR}/.zshrc
+	@ln -svf ${DOTFILES_DIR}/zsh/alias.zsh ${ZSH_DIR}/alias.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/exports.zsh ${ZSH_DIR}/exports.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/functions.zsh ${ZSH_DIR}/functions.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/options.zsh ${ZSH_DIR}/options.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/path.zsh ${ZSH_DIR}/path.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/plugins.zsh ${ZSH_DIR}/plugins.zsh
+	@ln -svf ${DOTFILES_DIR}/zsh/prompt.zsh ${ZSH_DIR}/prompt.zsh
 	@echo "Done!"
 
 .PHONY: git

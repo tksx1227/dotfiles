@@ -10,21 +10,18 @@
 # Preload
 autoload -Uz colors && colors
 
-if [ -z "${DOTFILES_DIR}" ]; then
-    DOTFILES_DIR=$HOME/dotfiles
-fi
+source ${ZDOTDIR}/functions.zsh
 
-source $DOTFILES_DIR/zsh/config/functions.zsh
 add_plugin "zsh-users/zsh-syntax-highlighting"
 add_plugin "zsh-users/zsh-autosuggestions"
 add_plugin "zsh-users/zsh-completions"
 
-source $DOTFILES_DIR/zsh/config/path.zsh
-source $DOTFILES_DIR/zsh/config/options.zsh
-source $DOTFILES_DIR/zsh/config/prompt.zsh
-source $DOTFILES_DIR/zsh/config/exports.zsh
-source $DOTFILES_DIR/zsh/config/alias.zsh
-source $DOTFILES_DIR/zsh/plugins/auto-completion.zsh
+source ${ZDOTDIR}/path.zsh
+source ${ZDOTDIR}/options.zsh
+source ${ZDOTDIR}/prompt.zsh
+source ${ZDOTDIR}/exports.zsh
+source ${ZDOTDIR}/alias.zsh
+source ${ZDOTDIR}/plugins.zsh
 
 . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
