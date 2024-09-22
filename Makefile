@@ -16,14 +16,24 @@ build: all
 all: zsh git tmux vim nvim ideavim
 
 .PHONY: init
-init: homebrew
+init: homebrew-init
 
-.PHONY: homebrew
-homebrew:
+.PHONY: homebrew-init
+homebrew-init:
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Installing MacOS package manager Homebrew...\033[0m"
 	@sudo true
 	@curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sudo -u $$USER /bin/bash
+	@echo "Done!"
+
+.PHONY: homebrew
+homebrew:
+	@echo "${SEPARATOR}"
+	@echo "\033[36m==> Installing apps managed by Homebrew...\033[0m"
+	@ln -svf ${DOTFILES_DIR}/homebrew/.Brewfile ${HOME}/.Brewfile
+	@brew update
+	@brew upgrade
+	@brew bundle -v --global
 	@echo "Done!"
 
 .PHONY: kitty
