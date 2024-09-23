@@ -8,8 +8,8 @@ return {
             style = "moon",  -- "moon", "storm", "night", "day"
             styles = {
                 -- Background styles. Can be "dark", "transparent" or "normal"
-                sidebars = "dark",
-                floats = "dark",
+                sidebars = "transparent",
+                floats = "transparent",
             },
         },
         config = function(_, opts)
