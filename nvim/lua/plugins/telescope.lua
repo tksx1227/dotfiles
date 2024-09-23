@@ -23,7 +23,7 @@ return {
                     mappings = {
                         i = {
                             ["<C-u>"] = false,
-                            ["<C-d>"] = false,
+                            ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
                             ["<C-f>"] = actions.preview_scrolling_down,
                             ["<C-b>"] = actions.preview_scrolling_up,
                             ["<C-h>"] = "which_key",
