@@ -40,8 +40,6 @@ map('n', 'j', 'gj', { noremap = true })
 map('n', 'k', 'gk', { noremap = true })
 map('n', 'gj', 'j', { noremap = true, silent = true })
 map('n', 'gk', 'k', { noremap = true, silent = true })
-map('n', 'ggk', 'gg', { noremap = true, silent = true })
-map('n', 'ggj', 'G', { noremap = true, silent = true })
 
 -- x, d, pでヤンクしない
 map('n', 'x', '"_x', { noremap = true })
