@@ -5,6 +5,12 @@ return {
         priority = 1000,
         opts = {
             transparent = true,
+            style = "moon",  -- "moon", "storm", "night", "day"
+            styles = {
+                -- Background styles. Can be "dark", "transparent" or "normal"
+                sidebars = "dark",
+                floats = "dark",
+            },
         },
         config = function(_, opts)
             require("tokyonight").setup(opts)
