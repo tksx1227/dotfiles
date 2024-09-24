@@ -73,3 +73,6 @@ map('n', '<C-k>', '$"<Cmd>move-1-{v:count1}<CR>=l"', { noremap = true, expr = tr
 map('n', '<C-j>', '$"<Cmd>move+{v:count1}<CR>=l"', { noremap = true, expr = true })
 map('x', '<C-k>', ":move'<-2<CR>gv=gv", { noremap = true, silent = true })
 map('x', '<C-j>', ":move'>+1<CR>gv=gv", { noremap = true, silent = true })
+
+-- <leader>0でハイライトを消す
+map('n', '<leader>0', ':nohlsearch<cr>', { noremap = true, silent = true })
