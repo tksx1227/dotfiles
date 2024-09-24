@@ -16,6 +16,7 @@ return {
         },
         opts = function()
             local actions = require("telescope.actions")
+            local layout = require("telescope.actions.layout")
 
             return {
                 defaults = {
@@ -31,12 +32,14 @@ return {
                             ["<C-f>"] = actions.preview_scrolling_down,
                             ["<C-b>"] = actions.preview_scrolling_up,
                             ["<C-h>"] = "which_key",
+                            ["<Tab>"] = layout.toggle_preview,
                         },
                         n = {
                             ["q"] = actions.close,
                             ["<C-h>"] = "which_key",
                             ["<C-p>"] = actions.move_selection_previous,
                             ["<C-n>"] = actions.move_selection_next,
+                            ["<Tab>"] = layout.toggle_preview,
                         },
                     },
                 },
