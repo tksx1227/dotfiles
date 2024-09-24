@@ -4,6 +4,7 @@ CONFIG_DIR := ${HOME}/.config
 GIT_DIR := ${CONFIG_DIR}/git
 KITTY_DIR := ${CONFIG_DIR}/kitty
 ZSH_DIR := ${CONFIG_DIR}/zsh
+KARABINER_DIR := ${CONFIG_DIR}/karabiner
 
 # tmux
 TPM_REPO_SRC := https://github.com/tmux-plugins/tpm
@@ -13,7 +14,7 @@ TPM_LOCAL_REPO := ${HOME}/.tmux/plugins/tpm
 build: all
 
 .PHONY: all
-all: zsh git tmux vim nvim ideavim
+all: kitty zsh git tmux vim nvim ideavim karabiner
 
 .PHONY: init
 init: homebrew-init
@@ -41,7 +42,7 @@ kitty: config
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building kitty configuration...\033[0m"
 	@mkdir -p ${KITTY_DIR}
-	@ln -svf ${DOTFILES_DIR}/kitty/kitty.conf ${HOME}/.config/kitty/kitty.conf
+	@ln -svf ${DOTFILES_DIR}/kitty/kitty.conf ${KITTY_DIR}/kitty.conf
 	@echo "Done!"
 
 .PHONY: zsh
@@ -97,6 +98,14 @@ ideavim:
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building ideavim configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/ideavim/.ideavimrc ${HOME}/.ideavimrc
+	@echo "Done!"
+
+.PHONY: karabiner
+karabiner:
+	@echo "${SEPARATOR}"
+	@echo "\033[36m==> Building karabiner configuration...\033[0m"
+	@mkdir -p ${KARABINER_DIR}
+	@ln -svf ${DOTFILES_DIR}/karabiner/karabiner.json ${KARABINER_DIR}/karabiner.json
 	@echo "Done!"
 
 .PHONY: config
