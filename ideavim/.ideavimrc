@@ -51,6 +51,15 @@ nnoremap <silent> Dd dd
 nnoremap <silent> DD dd
 vnoremap D d
 
+onoremap i<space> iW
+xnoremap i<space> iW
+onoremap a" 2i"
+onoremap a' 2i'
+onoremap a` 2i`
+xnoremap a" 2i"
+xnoremap a' 2i'
+xnoremap a` 2i`
+
 "-----------------------------------
 " IdeaVim key mapping
 "-----------------------------------
