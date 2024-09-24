@@ -55,9 +55,15 @@ map('n', 'DD', 'dd', { noremap = true, silent = true })
 map('v', 'D', 'd', { noremap = true })
 map('x', 'p', 'P', { noremap = true })
 
--- 単語操作を直感的にする
+-- 直感的にする系
 map('o', 'i<space>', 'iW', { noremap = true })
 map('x', 'i<space>', 'iW', { noremap = true })
+map('o', 'a"', '2i"', { noremap = true })
+map('o', 'a\'', '2i\'', { noremap = true })
+map('o', 'a`', '2i`', { noremap = true })
+map('x', 'a"', '2i"', { noremap = true })
+map('x', 'a\'', '2i\'', { noremap = true })
+map('x', 'a`', '2i`', { noremap = true })
 
 -- ヤンク後にカーソル位置が戻らないようにする
 map('x', 'y', 'mzy`z', { noremap = true })
