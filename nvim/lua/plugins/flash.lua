@@ -5,7 +5,7 @@ end
 return {
     {
         "folke/flash.nvim",
-        event = "VeryLazy",
+        event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         ---@type Flash.Config
         opts = {},
         -- stylua: ignore
