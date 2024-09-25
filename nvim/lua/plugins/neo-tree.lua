@@ -34,6 +34,10 @@ return {
                         desc = "Copy Path to Clipboard",
                     },
                     ["P"] = { "toggle_preview", config = { use_float = false } },
+                    ["s"] = "none",
+                    ["S"] = "none",
+                    ["-"] = "open_split",
+                    ["\\"] = "open_vsplit",
                 },
             },
             default_component_configs = {
