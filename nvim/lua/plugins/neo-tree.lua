@@ -54,6 +54,19 @@ return {
                     },
                 },
             },
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    never_show = {
+                        ".DS_Store",
+                        -- "thumbs.db",
+                    },
+                },
+                follow_current_file = {
+                    enabled = true,
+                    leave_dirs_open = false,
+                },
+            },
         },
     },
 }

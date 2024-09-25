@@ -76,3 +76,10 @@ map('x', '<C-j>', ":move'>+1<CR>gv=gv", { noremap = true, silent = true })
 
 -- <leader>0でハイライトを消す
 map('n', '<leader>0', ':nohlsearch<cr>', { noremap = true, silent = true })
+
+
+----------------------------------------------------------------
+-- Plugins
+
+-- NeoTree
+map('n', '<C-g>n', ':Neotree reveal<cr>', { noremap = true, silent = true })
