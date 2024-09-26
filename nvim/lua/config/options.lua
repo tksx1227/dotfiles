@@ -2,14 +2,14 @@ local set = vim.opt
 
 ---------------------------------------
 -- Base
-set.fenc = 'utf8' -- 文字コードをUTF-8に設定
-set.shell = '/bin/zsh' -- デフォルトのシェルをzshに設定
-set.belloff = 'all' -- ビープ音を消す
-set.mouse = 'a' -- マウスを有効化
-set.clipboard = 'unnamedplus,unnamed,' .. vim.o.clipboard -- OSのクリップボードを使用する
+set.fenc = "utf8" -- 文字コードをUTF-8に設定
+set.shell = "/bin/zsh" -- デフォルトのシェルをzshに設定
+set.belloff = "all" -- ビープ音を消す
+set.mouse = "a" -- マウスを有効化
+set.clipboard = "unnamedplus,unnamed," .. vim.o.clipboard -- OSのクリップボードを使用する
 set.updatetime = 300 -- アップデートを300msごとに行う
 set.wildmenu = true -- コマンド補完を強化
-set.wildmode = 'longest,list,full' -- リスト表示，最長マッチ
+set.wildmode = "longest,list,full" -- リスト表示，最長マッチ
 
 ---------------------------------------
 -- Files
@@ -25,14 +25,14 @@ set.number = true -- 行番号を表示
 set.smartindent = true -- スマートインデントを有効化
 set.laststatus = 2 -- ステータスラインを常に表示
 set.showcmd = true -- 入力中のコマンドステータスを表示する
-set.background = 'dark' -- 背景をダークモードに設定
-set.syntax = 'on' -- シンタックスハイライトを有効化
+set.background = "dark" -- 背景をダークモードに設定
+set.syntax = "on" -- シンタックスハイライトを有効化
 set.termguicolors = true -- termguicolorsを有効化
-set.signcolumn = 'yes' -- 左にスペースを開ける
+set.signcolumn = "yes" -- 左にスペースを開ける
 set.cursorline = true -- 行をハイライト
 set.list = true -- スペースと改行を可視化
-set.listchars:append('space:⋅')
-set.listchars:append('eol:↴')
+set.listchars:append("space:⋅")
+set.listchars:append("eol:↴")
 
 ---------------------------------------
 -- Tab
