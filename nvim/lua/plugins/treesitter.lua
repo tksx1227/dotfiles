@@ -9,7 +9,9 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
+                "cpp",
                 "diff",
+                "go",
                 "html",
                 "javascript",
                 "jsdoc",
@@ -18,8 +20,10 @@ return {
                 "lua",
                 "luadoc",
                 "luap",
+                "make",
                 "markdown",
                 "markdown_inline",
+                "php",
                 "printf",
                 "python",
                 "query",
@@ -31,7 +35,6 @@ return {
                 "vimdoc",
                 "xml",
                 "yaml",
-                "make",
             },
         },
         ---@param opts TSConfig
