@@ -75,10 +75,28 @@ map("x", "<C-k>", ":move'<-2<CR>gv=gv", { noremap = true, silent = true })
 map("x", "<C-j>", ":move'>+1<CR>gv=gv", { noremap = true, silent = true })
 
 -- <leader>0でハイライトを消す
-map("n", "<leader>0", ":nohlsearch<cr>", { noremap = true, silent = true })
+map("n", "<leader>0", ":noh<cr>", { noremap = true, silent = true })
 
 ----------------------------------------------------------------
 -- Plugins
 
 -- NeoTree
 map("n", "<C-g>n", ":Neotree reveal<cr>", { noremap = true, silent = true })
+
+-- hlslens
+map(
+    "n",
+    "n",
+    "<cmd>execute('normal! ' . v:count1 . 'n')<cr><cmd>lua require('hlslens').start()<cr>",
+    { noremap = true, silent = true }
+)
+map(
+    "n",
+    "N",
+    "<cmd>execute('normal! ' . v:count1 . 'N')<cr><cmd>lua require('hlslens').start()<cr>",
+    { noremap = true, silent = true }
+)
+map("n", "*", "*<cmd>lua require('hlslens').start()<cr>", { noremap = true, silent = true })
+map("n", "#", "#<cmd>lua require('hlslens').start()<cr>", { noremap = true, silent = true })
+map("n", "g*", "g*<cmd>lua require('hlslens').start()<cr>", { noremap = true, silent = true })
+map("n", "g#", "g#<cmd>lua require('hlslens').start()<cr>", { noremap = true, silent = true })

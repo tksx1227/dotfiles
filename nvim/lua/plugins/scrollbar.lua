@@ -8,6 +8,10 @@ return {
     {
         "petertriho/nvim-scrollbar",
         event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+        dependencies = {
+            "lewis6991/gitsigns.nvim",
+            "kevinhwang91/nvim-hlslens",
+        },
         opts = {
             show = true,
             set_highlights = true,
@@ -25,7 +29,8 @@ return {
             },
             handlers = {
                 cursor = false,
-                gitsigns = true,
+                gitsigns = true, -- Requires gitsigns
+                search = true, -- Requires hlslens
             },
         },
     },
