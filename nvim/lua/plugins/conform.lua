@@ -2,8 +2,7 @@ return {
     {
         "stevearc/conform.nvim",
         dependencies = { "williamboman/mason.nvim" },
-        lazy = true,
-        cmd = "ConformInfo",
+        event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         keys = {
             {
                 -- Customize or remove this keymap to your liking
