@@ -1,7 +1,3 @@
-if false then
-    return {}
-end
-
 return {
     {
         "windwp/nvim-autopairs",

@@ -1,7 +1,3 @@
-if false then
-    return {}
-end
-
 return {
     {
         "stevearc/conform.nvim",

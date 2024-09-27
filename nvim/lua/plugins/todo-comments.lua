@@ -1,7 +1,3 @@
-if false then
-    return {}
-end
-
 return {
     {
         "folke/todo-comments.nvim",

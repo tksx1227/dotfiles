@@ -1,7 +1,3 @@
-if false then
-    return {}
-end
-
 local colors = require("tokyonight.colors").setup()
 
 return {
