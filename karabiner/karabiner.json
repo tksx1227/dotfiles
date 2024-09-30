@@ -106,7 +106,7 @@
                 },
                 {
                     "from": { "key_code": "left_control" },
-                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                    "to": [{ "apple_vendor_top_case_key_code": "caps_lock" }]
                 }
             ]
         }
