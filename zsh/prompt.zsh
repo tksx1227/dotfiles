@@ -1,5 +1,6 @@
 # Base
-local p_logo="%F{189}%f"
+local p_success_logo="%F{189}%f"
+local p_fail_logo="%F{198}%f"
 local p_info="%F{147}%n%f"
 local p_cdir="%F{117}%~%f"
 local p_mark="%B%F{248}❯%f%b"
@@ -17,5 +18,5 @@ precmd () {
 }
 local p_vcs="%1(v|%F{183}%1v%F|)"
 
-PROMPT="$p_logo $p_info: $p_cdir $p_vcs"$'\n'"$p_mark "
+PROMPT="%(?.$p_success_logo.$p_fail_logo) $p_info: $p_cdir $p_vcs"$'\n'"$p_mark "
 RPROMPT="$p_time"
