@@ -10,6 +10,7 @@ return {
             { "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", desc = "Delete Other Buffers" },
             { "<leader>bl", "<cmd>BufferLineCloseRight<cr>", desc = "Delete Buffers to the Right" },
             { "<leader>bh", "<cmd>BufferLineCloseLeft<cr>", desc = "Delete Buffers to the Left" },
+            { "<leader>bc", "<cmd>BufferLinePickClose<cr>", desc = "Delete Selected Buffer" },
             { "<C-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
             { "<C-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
         },
