@@ -20,7 +20,7 @@ all: kitty zsh git tmux vim nvim ideavim karabiner
 init: homebrew-init
 
 .PHONY: homebrew-init
-homebrew-init:
+homebrew-init:  ## Install HomeBrew on your device.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Installing MacOS package manager Homebrew...\033[0m"
 	@sudo true
@@ -28,7 +28,7 @@ homebrew-init:
 	@echo "Done!"
 
 .PHONY: homebrew
-homebrew:
+homebrew:  ## Install the tools and apps listed in the Brewfile.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Installing apps managed by Homebrew...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/homebrew/.Brewfile ${HOME}/.Brewfile
@@ -38,7 +38,7 @@ homebrew:
 	@echo "Done!"
 
 .PHONY: kitty
-kitty: config
+kitty: config  ## Create symbolic link to kitty configuration file.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building kitty configuration...\033[0m"
 	@mkdir -p ${KITTY_DIR}
@@ -46,7 +46,7 @@ kitty: config
 	@echo "Done!"
 
 .PHONY: zsh
-zsh: config
+zsh: config  ## Create symbolic links to zsh configuration files.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building zsh configuration...\033[0m"
 	@mkdir -p ${ZSH_DIR}
@@ -62,7 +62,7 @@ zsh: config
 	@echo "Done!"
 
 .PHONY: git
-git: config
+git: config  ## Create symbolic links to Git configuration files.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building git configuration...\033[0m"
 	@mkdir -p ${GIT_DIR}
@@ -72,7 +72,7 @@ git: config
 	@echo "Done!"
 
 .PHONY: tmux
-tmux:
+tmux:  ## Create symbolic link to tmux configuration file.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building tmux configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/tmux/.tmux.conf ${HOME}/.tmux.conf
@@ -80,28 +80,28 @@ tmux:
 	@echo "Done!"
 
 .PHONY: vim
-vim:
+vim:  ## Create symbolic link to Vim configuration file.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building vim configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/vim/.vimrc ${HOME}/.vimrc
 	@echo "Done!"
 
 .PHONY: nvim
-nvim: config
+nvim: config  ## Create symbolic links to Neovim configuration files.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building neovim configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/nvim ${CONFIG_DIR}/
 	@echo "Done!"
 
 .PHONY: ideavim
-ideavim:
+ideavim:  ## Create symbolic link to ideavim configuration file.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building ideavim configuration...\033[0m"
 	@ln -svf ${DOTFILES_DIR}/ideavim/.ideavimrc ${HOME}/.ideavimrc
 	@echo "Done!"
 
 .PHONY: karabiner
-karabiner:
+karabiner:  ## Create symbolic link to Karabiner configuration file.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building karabiner configuration...\033[0m"
 	@mkdir -p ${KARABINER_DIR}
@@ -111,3 +111,7 @@ karabiner:
 .PHONY: config
 config:
 	@mkdir -p ${CONFIG_DIR}
+
+.PHONY: help
+help: ## Display this help screen
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
