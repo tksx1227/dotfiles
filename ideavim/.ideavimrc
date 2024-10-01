@@ -28,7 +28,11 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 nnoremap H ^
+onoremap H ^
+vnoremap H ^
 nnoremap L $
+onoremap L $
+vnoremap L $
 nnoremap <C-j> <C-e>
 nnoremap <C-k> <C-y>
 nnoremap <leader>0 :noh<CR>

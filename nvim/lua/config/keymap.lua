@@ -35,7 +35,11 @@ map("n", "<Leader>l", "<C-w>l", { noremap = true, silent = true })
 
 -- 移動系
 map("n", "H", "^", { noremap = true })
+map("o", "H", "^", { noremap = true })
+map("v", "H", "^", { noremap = true })
 map("n", "L", "$", { noremap = true })
+map("o", "L", "$", { noremap = true })
+map("v", "L", "$", { noremap = true })
 map("n", "j", "gj", { noremap = true })
 map("n", "k", "gk", { noremap = true })
 map("n", "gj", "j", { noremap = true, silent = true })

@@ -52,7 +52,11 @@ vnoremap ; :
 vnoremap : ;
 inoremap <silent> jj <Esc>
 nnoremap H ^
+onoremap H ^
+vnoremap H ^
 nnoremap L $
+onoremap L $
+vnoremap L $
 nnoremap - <C-x>
 nnoremap + <C-a>
 
