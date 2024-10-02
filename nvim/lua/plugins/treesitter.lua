@@ -10,6 +10,7 @@ return {
                 "bash",
                 "c",
                 "cpp",
+                "c_sharp",
                 "diff",
                 "go",
                 "html",
