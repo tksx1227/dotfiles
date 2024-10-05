@@ -101,11 +101,10 @@ ideavim:  ## Create symbolic link to ideavim configuration file.
 	@echo "Done!"
 
 .PHONY: karabiner
-karabiner:  ## Create symbolic link to Karabiner configuration file.
+karabiner:  ## Create symbolic link to Karabiner configuration directory.
 	@echo "${SEPARATOR}"
 	@echo "\033[36m==> Building karabiner configuration...\033[0m"
-	@mkdir -p ${KARABINER_DIR}
-	@ln -svf ${DOTFILES_DIR}/karabiner/karabiner.json ${KARABINER_DIR}/karabiner.json
+	@ln -svfn ${DOTFILES_DIR}/karabiner ${KARABINER_DIR}
 	@echo "Done!"
 
 .PHONY: config
