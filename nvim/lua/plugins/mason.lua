@@ -22,6 +22,7 @@ return {
                 ensure_installed = {
                     "stylua", -- lua formatter
                     "clang-format", -- c formatter
+                    "goimports", -- go formatter
                 },
             })
         end,

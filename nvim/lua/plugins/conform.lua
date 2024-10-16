@@ -23,6 +23,7 @@ return {
                 lua = { "stylua" },
                 c = { "clang-format" },
                 cpp = { "clang-format" },
+                go = { "goimports" },
             },
             -- Set default options
             default_format_opts = {
