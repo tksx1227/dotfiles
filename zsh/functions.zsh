@@ -24,3 +24,17 @@ func fssh() {
 
     ssh ${sshLoginHost}
 }
+
+# Diff with fzf and delta
+func fdiff() {
+    local diffFiles
+    IFS=$'\n' diffFiles=(`fzf --tmux -m`) # multiline string to array
+
+    if [ ${#diffFiles[@]} -ne 2 ]; then
+        echo "[Error] Select the two files you wish to see the differences between." >&2
+        return 1
+    fi
+
+    echo ${diffFiles[1]} ${diffFiles[2]}
+    diff -u ${diffFiles[1]} ${diffFiles[2]} | delta
+}
