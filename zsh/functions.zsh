@@ -11,3 +11,16 @@ func add_plugin() {
         source ${ZDOTDIR}/plugins/${PLUGIN_NAME}/${PLUGIN_NAME}.plugin.zsh
     FPATH=${ZDOTDIR}/plugins/${PLUGIN_NAME}:$FPATH
 }
+
+# SSH with fzf
+func fssh() {
+    local sshLoginHost
+    sshLoginHost=`cat ~/.ssh/config | grep -i ^host | awk '{print $2}' | fzf --tmux`
+
+    if [ "$sshLoginHost" = "" ]; then
+        # ex) Ctrl-C.
+        return 1
+    fi
+
+    ssh ${sshLoginHost}
+}
