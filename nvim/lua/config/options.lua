@@ -52,3 +52,9 @@ set.smartcase = true -- 検索文字に大文字がある場合は大文字と�
 set.incsearch = true -- 検索文字列入力時に順次対象文字列にヒットさせる
 set.wrapscan = true -- 最後まで行くと最初に戻る
 set.hlsearch = true -- 検索語をハイライト表示
+
+---------------------------------------
+-- Fold
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldenable = false
