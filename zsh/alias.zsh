@@ -7,13 +7,6 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
 
-# Macのデフォルトソフトを使用しない
-if [ "$(uname)" = "Darwin" ]; then
-    alias ctags=$(brew --prefix)/opt/ctags/bin/ctags
-    alias git=$(brew --prefix)/opt/git/bin/git
-    alias swift=$(brew --prefix)/opt/swift/bin/swift
-fi
-
 # Config
 alias kittyconf="vi ~/.config/kitty/kitty.conf"
 alias tmuxconf="vi ~/.tmux.conf"
