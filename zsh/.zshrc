@@ -20,3 +20,6 @@ source ${ZDOTDIR}/prompt.zsh
 source ${ZDOTDIR}/exports.zsh
 source ${ZDOTDIR}/alias.zsh
 source ${ZDOTDIR}/plugins.zsh
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

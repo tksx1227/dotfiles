@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+brew "asdf"
 brew "fd"
 brew "fzf"
 brew "git"
