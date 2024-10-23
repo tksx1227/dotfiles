@@ -24,6 +24,7 @@ return {
                 c = { "clang-format" },
                 cpp = { "clang-format" },
                 go = { "goimports" },
+                javascript = { "prettier" },
             },
             -- Set default options
             default_format_opts = {

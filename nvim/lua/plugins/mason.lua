@@ -23,6 +23,7 @@ return {
                     "stylua", -- lua formatter
                     "clang-format", -- c formatter
                     "goimports", -- go formatter
+                    "prettier",
                 },
             })
         end,
