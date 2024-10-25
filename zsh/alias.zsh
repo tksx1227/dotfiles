@@ -6,6 +6,7 @@ alias ls="ls -FG"
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
+alias grep="grep --color"
 
 # Config
 alias kittyconf="vi ~/.config/kitty/kitty.conf"
