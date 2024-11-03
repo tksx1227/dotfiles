@@ -26,6 +26,7 @@ set backspace=2 " バックスペースを有効化
 set showcmd " 入力中のコマンドステータスを表示する
 set background=dark " 背景をダークモードに設定
 set cursorline " 行をハイライト
+set list listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:⋅
 
 "-----------------------------------
 " Tab
