@@ -69,9 +69,6 @@ map("x", 'a"', '2i"', { noremap = true })
 map("x", "a'", "2i'", { noremap = true })
 map("x", "a`", "2i`", { noremap = true })
 
--- ヤンク後にカーソル位置が戻らないようにする
-map("x", "y", "mzy`z", { noremap = true })
-
 -- 行を上下に移動する
 map("n", "<C-k>", '$"<Cmd>move-1-{v:count1}<CR>=l"', { noremap = true, expr = true })
 map("n", "<C-j>", '$"<Cmd>move+{v:count1}<CR>=l"', { noremap = true, expr = true })
