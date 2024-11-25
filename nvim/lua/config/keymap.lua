@@ -44,6 +44,7 @@ map("n", "j", "gj", { noremap = true })
 map("n", "k", "gk", { noremap = true })
 map("n", "gj", "j", { noremap = true, silent = true })
 map("n", "gk", "k", { noremap = true, silent = true })
+map("n", "<S-m>", "%", { noremap = true })
 
 -- x, d, pでヤンクしない
 map("n", "x", '"_x', { noremap = true })
