@@ -69,5 +69,9 @@ return {
                 },
             },
         },
+        config = function(_, opts)
+            vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { bg = "#0F0F30" })
+            require("neo-tree").setup(opts)
+        end,
     },
 }
