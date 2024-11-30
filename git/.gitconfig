@@ -4,7 +4,7 @@
 [core]
     editor = nvim
     excludesfile = ~/.config/git/.gitignore_global
-    pager = LESS="R" delta --paging=always
+    pager = delta
 [color]
     ui = auto
 [alias]
