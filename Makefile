@@ -5,6 +5,7 @@ GIT_DIR := $(CONFIG_DIR)/git
 KITTY_DIR := $(CONFIG_DIR)/kitty
 ZSH_DIR := $(CONFIG_DIR)/zsh
 KARABINER_DIR := $(CONFIG_DIR)/karabiner
+GHOSTTY_DIR := $(CONFIG_DIR)/ghostty
 
 # tmux
 TPM_REPO_SRC := https://github.com/tmux-plugins/tpm
@@ -43,6 +44,14 @@ kitty: config  ## Create symbolic link to kitty configuration file.
 	@echo "\033[36m==> Building kitty configuration...\033[0m"
 	@mkdir -p $(KITTY_DIR)
 	@ln -svf $(DOTFILES_DIR)/kitty/kitty.conf $(KITTY_DIR)/kitty.conf
+	@echo "Done!"
+
+.PHONY: ghostty
+ghostty: config  ## Create symbolic link to ghostty configuration file.
+	@echo "$(SEPARATOR)"
+	@echo "\033[36m==> Building ghostty configuration...\033[0m"
+	@mkdir -p $(GHOSTTY_DIR)
+	@ln -svf $(DOTFILES_DIR)/ghostty/config $(GHOSTTY_DIR)/config
 	@echo "Done!"
 
 .PHONY: zsh

@@ -1,0 +1,21 @@
+#############################################
+### Appearance
+foreground = #e0e0e0
+background = #020312
+macos-titlebar-style = transparent
+background-opacity = 0.75
+
+#############################################
+### Font
+font-size = 14.0
+font-family = Menlo
+
+#############################################
+### Clipboard
+clipboard-read = deny
+clipboard-write = deny
+clipboard-paste-protection = true
+
+#############################################
+### Other
+cursor-click-to-move = true
