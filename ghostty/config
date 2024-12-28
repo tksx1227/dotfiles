@@ -1,21 +1,55 @@
 #############################################
 ### Appearance
-foreground = #e0e0e0
-background = #020312
-macos-titlebar-style = transparent
+macos-titlebar-style = hidden
 background-opacity = 0.75
+
+window-theme = ghostty
+theme = tksx1227
+
+window-decoration = true
+window-padding-x = 8
+window-padding-y = 4
+
+window-width = 130
+window-height = 40
+window-save-state = never
+window-step-resize = false
+resize-overlay = after-first
+resize-overlay-position = center
+
+window-new-tab-position = end
+focus-follows-mouse = true
 
 #############################################
 ### Font
 font-size = 14.0
 font-family = Menlo
+font-family-bold = Menlo
+font-family-italic = Menlo
+font-family-bold-italic = Menlo
+bold-is-bright = true
 
 #############################################
 ### Clipboard
 clipboard-read = deny
 clipboard-write = deny
+clipboard-trim-trailing-spaces = true
 clipboard-paste-protection = true
+copy-on-select = false
 
 #############################################
-### Other
-cursor-click-to-move = true
+### Cursor
+cursor-style = block
+cursor-style-blink = true
+
+#############################################
+### Mouse
+mouse-hide-while-typing = true
+
+#############################################
+### MacOS
+macos-window-shadow = true
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+macos-icon = official
+font-thicken = true
