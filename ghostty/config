@@ -23,11 +23,12 @@ focus-follows-mouse = true
 #############################################
 ### Font
 font-size = 14.0
-font-family = Menlo
-font-family-bold = Menlo
-font-family-italic = Menlo
-font-family-bold-italic = Menlo
+font-family = Monaspace Argon Var
+font-family-bold = Monaspace Argon Var
+font-family-italic = Monaspace Argon Var
+font-family-bold-italic = Monaspace Argon Var
 bold-is-bright = true
+font-feature = -dlig
 
 #############################################
 ### Clipboard
@@ -52,4 +53,4 @@ macos-window-shadow = true
 macos-auto-secure-input = true
 macos-secure-input-indication = true
 macos-icon = official
-font-thicken = true
+font-thicken = false
