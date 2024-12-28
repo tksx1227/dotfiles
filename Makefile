@@ -52,6 +52,7 @@ ghostty: config  ## Create symbolic link to ghostty configuration file.
 	@echo "\033[36m==> Building ghostty configuration...\033[0m"
 	@mkdir -p $(GHOSTTY_DIR)
 	@ln -svf $(DOTFILES_DIR)/ghostty/config $(GHOSTTY_DIR)/config
+	@ln -svfn $(DOTFILES_DIR)/ghostty/themes $(GHOSTTY_DIR)/themes
 	@echo "Done!"
 
 .PHONY: zsh
