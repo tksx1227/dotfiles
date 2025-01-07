@@ -1,7 +1,7 @@
 return {
     {
         "ysmb-wtsg/in-and-out.nvim",
-        event = "sdafsdafVeryLazy",
+        event = "VeryLazy",
         keys = {
             {
                 "<C-l>",
