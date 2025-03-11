@@ -23,3 +23,6 @@ source ${ZDOTDIR}/plugins.zsh
 
 # Load fzf key bindings.
 source <(fzf --zsh)
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
