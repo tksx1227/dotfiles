@@ -7,10 +7,19 @@ return {
         config = function()
             require("copilot").setup({
                 suggestion = {
+                    enabled = true,
                     auto_trigger = true,
                     keymap = {
                         accept = "<Tab>", -- Tab で提案を受け入れる
                     },
+                },
+                panel = {
+                    enabled = false,
+                },
+                filetypes = {
+                    yaml = true,
+                    markdown = true,
+                    gitcommit = true,
                 },
             })
         end,
