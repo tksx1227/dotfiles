@@ -64,6 +64,8 @@ xnoremap a" 2i"
 xnoremap a' 2i'
 xnoremap a` 2i`
 
+noremap <S-m> %
+
 "-----------------------------------
 " IdeaVim key mapping
 "-----------------------------------
