@@ -23,7 +23,6 @@ set.hidden = true -- バッファが編集中でもほかのファイルを開�
 set.title = true -- 編集中のファイル名を表示
 set.number = true -- 行番号を表示
 set.smartindent = true -- スマートインデントを有効化
-set.laststatus = 2 -- ステータスラインを常に表示
 set.showcmd = true -- 入力中のコマンドステータスを表示する
 set.background = "dark" -- 背景をダークモードに設定
 set.syntax = "on" -- シンタックスハイライトを有効化
@@ -33,12 +32,21 @@ set.cursorline = true -- 行をハイライト
 set.list = true -- スペースと改行を可視化
 set.listchars:append("space:⋅")
 set.listchars:append("eol:↴")
+set.cmdheight = 0 -- cmdlineを非表示にする
+set.laststatus = 0 -- ステータスラインを非表示
+set.statusline = "─"
+set.fillchars:append({ stl = "─", stlnc = "─" })
 
 ---------------------------------------
--- Tab
+-- Indent
+set.autoindent = true
+set.smartindent = true
 set.expandtab = true -- Tab文字を半角スペースにする
-set.tabstop = 4 -- 行頭以外のTab文字の表示幅(スペースいくつ分)
-set.shiftwidth = 4 -- 行頭でのTab文字の表示幅
+set.tabstop = 2 -- 行頭以外のTab文字の表示幅(スペースいくつ分)
+set.shiftwidth = 2 -- 行頭でのTab文字の表示幅
+set.softtabstop = 2
+set.showtabline = 0
+set.shiftround = true
 
 ---------------------------------------
 -- Window
