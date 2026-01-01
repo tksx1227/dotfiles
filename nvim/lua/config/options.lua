@@ -47,6 +47,7 @@ set.shiftwidth = 2 -- 行頭でのTab文字の表示幅
 set.softtabstop = 2
 set.showtabline = 0
 set.shiftround = true
+set.winborder = "rounded"
 
 ---------------------------------------
 -- Window
