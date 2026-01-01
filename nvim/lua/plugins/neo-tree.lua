@@ -17,8 +17,19 @@ return {
             open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
             filesystem = {
                 bind_to_cwd = false,
-                follow_current_file = { enabled = true },
                 use_libuv_file_watcher = true,
+                filtered_items = {
+                    visible = true,
+                    never_show = {
+                        ".git",
+                        ".DS_Store",
+                        -- "thumbs.db",
+                    },
+                },
+                follow_current_file = {
+                    enabled = true,
+                    leave_dirs_open = true,
+                },
             },
             window = {
                 mappings = {
@@ -52,20 +63,6 @@ return {
                         unstaged = "󰄱",
                         staged = "󰱒",
                     },
-                },
-            },
-            filesystem = {
-                filtered_items = {
-                    visible = true,
-                    never_show = {
-                        ".git",
-                        ".DS_Store",
-                        -- "thumbs.db",
-                    },
-                },
-                follow_current_file = {
-                    enabled = true,
-                    leave_dirs_open = false,
                 },
             },
         },
