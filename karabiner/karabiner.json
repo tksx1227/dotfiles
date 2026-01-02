@@ -94,6 +94,38 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "escキーを押したときに、英数キーも送信する（vim用）",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    { "key_code": "japanese_eisuu" },
+                                    { "key_code": "escape" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+[を押したときに、英数キーも送信する（vim用） (rev 2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    { "key_code": "japanese_eisuu" },
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -108,7 +140,8 @@
                     "from": { "key_code": "left_control" },
                     "to": [{ "key_code": "caps_lock" }]
                 }
-            ]
+            ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
 }
