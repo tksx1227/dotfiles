@@ -7,6 +7,7 @@ return {
         dependencies = {
             "lewis6991/gitsigns.nvim",
             "kevinhwang91/nvim-hlslens",
+            "folke/tokyonight.nvim",
         },
         opts = {
             show = true,

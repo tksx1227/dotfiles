@@ -17,20 +17,4 @@ return {
             vim.cmd([[colorscheme tokyonight]])
         end,
     },
-    {
-        "maxmx03/fluoromachine.nvim",
-        lazy = false,
-        priority = 5000,
-        config = function()
-            local fm = require("fluoromachine")
-
-            fm.setup({
-                theme = "fluoromachine", -- "delta", "fluoromachine", "retrowave"
-                glow = false,
-                transparent = true,
-            })
-
-            vim.cmd.colorscheme("fluoromachine")
-        end,
-    },
 }
