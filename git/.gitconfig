@@ -14,7 +14,11 @@
     ba = branch -a
     me = branch --show-current
     co = checkout
-    coo = !git checkout $(git branch | fzf)
+    coo = "!f() { \
+        b=$(git branch --format='%(refname:short)' | fzf); \
+        s=$?; \
+        [ $s -eq 0 ] && [ -n \"$b\" ] && git checkout \"$b\"; \
+    }; f"
     ci = commit
     d = diff
     ds = diff --staged
