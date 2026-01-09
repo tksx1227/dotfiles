@@ -14,6 +14,7 @@
     ba = branch -a
     me = branch --show-current
     co = checkout
+    coo = !git checkout $(git branch | fzf)
     ci = commit
     d = diff
     ds = diff --staged
