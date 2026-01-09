@@ -19,6 +19,11 @@
         s=$?; \
         [ $s -eq 0 ] && [ -n \"$b\" ] && git checkout \"$b\"; \
     }; f"
+    coa = "!f() { \
+        b=$(git branch --all --format='%(refname:short)' | fzf); \
+        s=$?; \
+        [ $s -eq 0 ] && [ -n \"$b\" ] && git checkout \"$b\"; \
+    }; f"
     ci = commit
     d = diff
     ds = diff --staged
