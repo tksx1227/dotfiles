@@ -25,9 +25,7 @@ source ${ZDOTDIR}/plugins.zsh
 source <(fzf --zsh)
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/s16520/.docker/completions $fpath)
+fpath=(/Users/tomori/.docker/completions $fpath)
 autoload -Uz compinit
-compinit
+(( ${+_comps[docker]} )) || compinit
 # End of Docker CLI completions
-eval "$(mise activate zsh)"
-eval "$(direnv hook zsh)"

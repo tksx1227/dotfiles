@@ -11,4 +11,5 @@ path=(
     /usr/local/sbin(N-/)
     /Library/Apple/usr/bin
     $HOME/.local/bin(N-/)
+    $HOME/.docker/bin(N-/)
 )
