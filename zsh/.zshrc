@@ -24,5 +24,10 @@ source ${ZDOTDIR}/plugins.zsh
 # Load fzf key bindings.
 source <(fzf --zsh)
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/s16520/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+eval "$(mise activate zsh)"
+eval "$(direnv hook zsh)"
