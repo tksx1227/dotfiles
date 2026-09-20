@@ -1,12 +1,11 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+        lazy = false,
+        branch = "main",
         build = ":TSUpdate",
-        event = "VeryLazy",
-        opts = {
-            highlight = { enable = true },
-            indent = { enable = true },
-            ensure_installed = {
+        init = function()
+            local ensureInstalled = {
                 "bash",
                 "c",
                 "cpp",
@@ -17,7 +16,6 @@ return {
                 "javascript",
                 "jsdoc",
                 "json",
-                "jsonc",
                 "lua",
                 "luadoc",
                 "luap",
@@ -29,6 +27,7 @@ return {
                 "python",
                 "query",
                 "regex",
+                "hcl",
                 "terraform",
                 "toml",
                 "tsx",
@@ -37,11 +36,14 @@ return {
                 "vimdoc",
                 "xml",
                 "yaml",
-            },
-        },
-        ---@param opts TSConfig
-        config = function(_, opts)
-            require("nvim-treesitter.configs").setup(opts)
+            }
+            local alreadyInstalled = require("nvim-treesitter.config").get_installed()
+            local parsersToInstall = vim.iter(ensureInstalled)
+                :filter(function(parser)
+                    return not vim.tbl_contains(alreadyInstalled, parser)
+                end)
+                :totable()
+            require("nvim-treesitter").install(parsersToInstall)
         end,
     },
 }
