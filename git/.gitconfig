@@ -19,11 +19,6 @@
         s=$?; \
         [ $s -eq 0 ] && [ -n \"$b\" ] && git checkout \"$b\"; \
     }; f"
-    coa = "!f() { \
-        b=$(git branch --all --format='%(refname:short)' | fzf); \
-        s=$?; \
-        [ $s -eq 0 ] && [ -n \"$b\" ] && git checkout \"$b\"; \
-    }; f"
     ci = commit
     d = diff
     ds = diff --staged
@@ -36,6 +31,8 @@
     log3 = log -n 3
     log4 = log -n 4
     log5 = log -n 5
+    cfg = config --list
+    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [init]
     defaultBranch = main
 [commit]
