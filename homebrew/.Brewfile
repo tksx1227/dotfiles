@@ -1,4 +1,4 @@
-brew "asdf"
+brew "deno"
 brew "fd"
 brew "fzf"
 brew "ghq"
