@@ -2,7 +2,7 @@ return {
     {
         "toppair/peek.nvim",
         event = { "VeryLazy" },
-        build = "deno task --quiet build:fast", -- NOTE: Denoが必要 (`brew install deno`)
+        build = "deno task --quiet build", -- NOTE: Denoが必要 (`brew install deno`)
         config = function()
             require("peek").setup()
             vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
