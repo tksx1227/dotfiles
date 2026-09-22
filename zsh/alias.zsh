@@ -8,6 +8,13 @@ alias ll="ls -l"
 alias lla="ls -la"
 alias grep="grep --color"
 
+# Dir
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
 # Config
 alias kittyconf="vi ~/.config/kitty/kitty.conf"
 alias tmuxconf="vi ~/.tmux.conf"
