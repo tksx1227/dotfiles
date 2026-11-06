@@ -3,31 +3,33 @@ local colors = require("tokyonight.colors").setup()
 return {
     {
         "petertriho/nvim-scrollbar",
+        -- TODO: 2026-11-16 に v2 が main にマージされたらこの行を削除する
+        branch = "refactor/v2",
         event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         dependencies = {
             "lewis6991/gitsigns.nvim",
-            "kevinhwang91/nvim-hlslens",
             "folke/tokyonight.nvim",
         },
         opts = {
-            show = true,
             set_highlights = true,
-            hide_if_all_visible = true,
-            handle = {
-                color = colors.fg_dark,
-            },
             marks = {
-                Search = { color = colors.orange },
-                Error = { color = colors.error },
-                Warn = { color = colors.warning },
-                Info = { color = colors.info },
-                Hint = { color = colors.hint },
-                Misc = { color = colors.purple },
+                Search = { highlight = { fg = colors.orange } },
+                Error = { highlight = { fg = colors.error } },
+                Warn = { highlight = { fg = colors.warning } },
+                Info = { highlight = { fg = colors.info } },
+                Hint = { highlight = { fg = colors.hint } },
+                Misc = { highlight = { fg = colors.purple } },
             },
-            handlers = {
+            providers = {
                 cursor = false,
                 gitsigns = true, -- Requires gitsigns
-                search = true, -- Requires hlslens
+            },
+            scrollbar = {
+                show = true,
+                hide_if_all_visible = true,
+                thumb = {
+                    highlight = { bg = colors.fg_dark },
+                },
             },
         },
     },
